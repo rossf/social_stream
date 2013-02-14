@@ -5,6 +5,7 @@ db/sphinx
 documents/
 log/*pid
 log/*log
+log/*pid
 public/images/tmp/
 public/system
 tmp/*
