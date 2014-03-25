@@ -1,0 +1,15 @@
+.activities,
+.contacts,
+.notifications,
+.relation_customs,
+#profile-info,
+div.repository,
+.document
+  @include make-sm-column(12, $gutter: $grid-gutter-width)
+  @include make-sm-column(9, $gutter: $grid-gutter-width)
+  @include make-md-column(10, $gutter: $grid-gutter-width)
+  @include make-lg-column(10, $gutter: $grid-gutter-width)
+  @media (max-width: $screen-xs-min)
+    padding: 0
+  @media (max-width: $screen-sm-min)
+    padding: 0

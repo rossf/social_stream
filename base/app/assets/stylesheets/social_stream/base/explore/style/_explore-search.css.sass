@@ -1,0 +1,102 @@
+/////////////////////////////////////// EXPLORE SEARCH
+///////////// 
+
+
+  .menuv 
+    @include border-radius
+    border: 1px solid #f1f1f1 
+    ul
+      li 
+        font-size: 14px
+        ol 
+          li
+            a
+              color: $gray-lighter
+
+      
+    .advanced 
+      color: $link-color
+      text-decoration: none
+      font-size: 12px
+      cursor: pointer
+
+  .search-result 
+    .tags-list
+      font-size: 16px
+      ul
+        a
+          cursor: pointer
+          color: $gray-lighter
+          &:hover
+            color: $link-color
+ 
+#search
+  h4
+    border-bottom: 1px solid #ccc
+  .btn-group
+    border-bottom: 1px dashed #ccc
+    .btn 
+      font-size: 13px !important
+  
+  form
+    input
+      &[type="submit"]
+        font-size: 15px
+
+.content-full
+  .media,
+  .root  
+    .text,
+    .description,
+    .follow
+      font-size: 14px !important
+      h6
+        font-size: 16px !important 
+
+
+
+/////////////////////////////////////// EXPLORE SEARCH RESULT
+///////////// users, groups, events, post, (documents, audios, images, videos. View: documents/app/assets/stylesheet/documents/explore/explore-documents
+
+
+#search-results
+  .contact
+    .avatar
+      a
+        img
+          @include border-radius
+    .data
+      .name
+        color: $black
+      .info
+        font-size: 80%
+        color: $gray-light
+
+
+  .event
+    width: 240px
+    .data
+      .date
+        font-size: 12px
+      .frequency
+        @include text-overflow
+        font-size: 12px
+        color: $gray-light
+  
+  .link
+    .brifing
+      h5
+        @include text-overflow
+      a
+        @include text-overflow
+
+
+  .comment
+    @include text-overflow
+    a
+      @include text-overflow
+
+  .post
+    @include text-overflow
+    a
+      @include text-overflow

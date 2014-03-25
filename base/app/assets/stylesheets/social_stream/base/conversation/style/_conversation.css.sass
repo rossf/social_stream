@@ -1,0 +1,86 @@
+@import "jquery.cleditor"
+
+#conversations
+  #toolbar
+  .conversations
+    .conversation
+      .content_left
+        width: 220px
+        h5 
+          a
+            @include text-overflow
+        .date
+          color: #888
+
+      .content_right
+        color: $gray
+        .subject
+          font-weight: normal
+          @include text-overflow
+          a
+            font-weight: bold
+            &:hover
+              text-decoration: none
+        .briefing
+          @include text-overflow
+          color: $gray
+        .date
+          color: $gray
+        .action
+          a:link
+            color: $gray
+          a:hover
+            color: $brand-primary
+            text-decoration: none
+
+
+  
+#ck_editor
+  .cleditorMain
+    @include border-radius
+.conversations
+  .conversation
+    @include opacity (50)
+
+.unread
+  @include opacity (100)
+
+.conversation_full
+  h3
+    @include text-overflow
+  .participants
+    @include border-radius
+    background-color: #f1f1f1
+    img
+      @include border-radius
+  .soften
+    border-color: $white
+
+  .cont_conversation
+    .answer
+      color: $gray
+    .cleditorMain
+      @include border-radius 
+      border-color: #c5c5c5
+    .actions
+      input
+        &[type="submit"]
+          @include border-radius
+
+
+
+  .message
+    border-bottom: 1px solid #f1f1f1
+    background-color: $white
+    .media
+      .pull-left
+        img
+          @include border-radius
+      .date
+        color: #999
+
+
+
+#content
+  .notification
+    color: $gray

@@ -1,0 +1,72 @@
+.toolbar-profile
+  .toolbar_menu
+    ul
+      background: #f9f9f9
+      li
+        @include border-radius
+        a
+          @include text-overflow
+        &:hover
+          a
+            color: $white
+            @include transition(color 1s)
+            background: transparent
+
+        a
+          &:hover
+            color: $white
+
+
+#toolbar
+  @media (mmin-width: $screen-xs-min)
+    background-color: $white
+  h5
+    @include text-overflow
+    a
+      color: #666
+      font-family: $font-family-sans-serif-Medium
+      &:hover
+        text-decoration: none
+        color: #444
+  .contact-button
+    @include btn-add
+
+  
+
+  .contacts-toolbar,
+  section.groups
+    h4
+      font-family: $font-family-sans-serif-Light
+    ul
+      border-right: 1px solid #ddd
+      img
+        @include border-radius
+    .contacts-more,
+    .groups-more
+      text-align: right
+
+
+
+
+  #avatar_profile,
+  .logo_home
+    font-size: 26px
+    line-height: 49px
+    @include text-overflow
+    img
+      @include border-radius
+    .subject-name
+      @include text-overflow
+    .subject-name-phone
+      font-size: 16px
+      @include text-overflow
+      a
+        color: #666
+        &:hover
+          text-decoration: none
+          color: #444
+
+    .logo_caption
+      font-size: 15px
+      text-align: center
+

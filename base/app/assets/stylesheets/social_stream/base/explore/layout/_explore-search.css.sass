@@ -35,8 +35,7 @@
       width: 889px
       float: left
       ul
-        @include makeColumn(2, 0)
-
+        
 
 
 #search
@@ -67,7 +66,6 @@
 
 #explore-header
   .btn
-    @include btn-primary
     font-size: 16px
 
 /////////////////////////////////////// EXPLORE SEARCH RESULT
@@ -102,7 +100,7 @@
           display: inline-block
           margin-top: 11px
         .info
-          @include ellipsis
+          @include text-overflow
           z-index: 1
           padding-left: 2%
 
@@ -114,11 +112,9 @@
       min-height: 81px
       margin-bottom: 14px
       .avatar
-        @include makeColumnoMargin(1, 0)
         display: inline
         margin-top: 14px
       .data
-        @include makeColumnoMargin(2, 0)
         display: inline-block
 
 
@@ -156,4 +152,4 @@
       background-color: $white
       padding: 13px 8px
       p
-        @include ellipsis
+        @include text-overflow

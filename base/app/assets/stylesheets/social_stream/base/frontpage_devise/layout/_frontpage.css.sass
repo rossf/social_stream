@@ -1,92 +1,56 @@
-#frontpage,
-#new_session
-  @include grid-core-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
+//* Header sign-out *//
+
+header.headerFront
+  padding: 12px 0 0 0
+  .logo-out
+    float: left
+    .logo
+      width: 52px
+      padding-left: 20px
+      margin-top: -4px
+  a.expl
+    float: left
+  a.expl,
+  ul.log
+    padding: 4px 0 0 7px
+  ul.log
+    float: right
+    margin-right: 20px
+    padding-left: 0
+    @include horizontal-menu
+    li
+      float: left
+      &:last-child
+        margin-left: 20px
+      ul
+        @include dropdown-log
+
+
+#frontpage
+  .logo-out
+    @include clearfix
+    a
+      @include center-block
+      width: 79px
 
   .explanation
-    @extend .hidden-phone
-    width: 54.14286%
-    float: left
-    margin-left: 4%
-    margin-top: 28px
-    height: 110px
-    padding: 26px 0px 69px 36px
-    clear: both
-    .lite
-      margin: 3px 0px 23px 0
-    .btn
-      clear: both
-      @include btn-secundary
-      padding: 7px 30px
-      margin-right: 21px
-
-  #presentation
-    @include grid-core-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
-    @include centered
-    float: left
-    background: none
-    border: none
-    .characteristics
-      width: 27%
-      margin-left: 2.9%
-      &:first-child
-        margin-left: 4% 
-
-  #sign_in
-    width: 27%
-    float: right
-    display: inline-block
-    padding: 5px 15px
-    margin: 27px 2% 0 14px
+    margin: 0px 0 10px
+    img
+      @include center-block
+      @include img-responsive
     h3
-      margin-top: 0px
-      margin-bottom: 0px
-    #remember
-      margin-bottom: 10px 
-      display: inline !important
-      label
-        display: inline-block
-        margin-top: 5px
-    input
-      &[type="submit"]
-        float: right
-        display: inline
-    .soften
       clear: both
+    h3, h4
+      margin-top: 0
 
 
-
-
-
-  #presentation
-    display: block
-    clear: both
-    margin-top: 35px
-    .characteristics
-      float: left
-      padding: 10px
-      margin: 10px 0 0 20px
-      header
-        margin: 5px 0
-      p
-        padding: 9px 0px 5px 0px
-
-
-
-#sign_in,
-#forgot-pass,
-#registration
-  .options
-    margin-top: 3px
-    a
-      border-right: 1px solid #ccc
-      padding-right: 6px
-      &:last-child
-        border-right: none
-
-#header_search_form
-  margin-bottom: 0px
-
-
-
-#login_data
-  @include clearfix
+#presentation
+  margin-top: 35px
+  .characteristic
+    @include make-sm-column(4, $gutter: $grid-gutter-width)
+    @include make-md-column(4, $gutter: $grid-gutter-width)
+    @include make-lg-column(4, $gutter: $grid-gutter-width)
+    header
+      margin: 5px 0
+    p
+      padding: 9px 0px 5px 0px

@@ -1,37 +1,8 @@
-#registration
-  @include grid-core-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
-  .welcome
-    @extend .hidden-phone
-    @include grid-core-span(6, $fluidGridColumnWidth, $fluidGridGutterWidth)
-    float: left
-    margin-left: 4%
-  .registration
-    @include grid-core-span(5, $fluidGridColumnWidth, $fluidGridGutterWidth)
-    float: right
-    display: inline-block
-    margin: 30px 2% 0 14px
-    h3
-      margin: 0px 12px 10px 0
-    #new_user
-      width: 94%
-      padding: 0 3%
-    #remember
-      display: inilne
-      float: left
-    input
-      &[type="submit"]
-        float: right
-        display: inline-block
-        margin-bottom: 10px
-    .soften
-      clear: both
+.registration,
+.forgot-pass,
+.confirmation,
+#sign_in
+  @include devise-box-layout
 
-#error_explanation
-  h2
-    font-size: 20px
-    color: #BB5A5A
-    text-align: center
-    ul
-      text-align: center
 
 

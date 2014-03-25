@@ -1,0 +1,39 @@
+.contacts
+  .btn-group
+    max-width: 400px
+    .btn
+      .caret
+        margin-left: 6px
+
+  .contact-filter
+    margin-left: 0px
+    float: left
+    margin-botom: 0 !important
+  .new_group-modal-link
+    float: right
+
+  .tab-content
+    .contact-list
+      clear: both
+      min-height: 500px
+      padding-bottom: 50px
+      .contact
+        @include box-layout
+    
+
+#contact-form
+  ul
+    input
+      &[type="check"]
+        display: inline
+    label
+      display: inline-block
+      margin-left: 10px
+
+  .new_contact_text_area
+    @include clearfix
+    height: 200px 
+  input
+    &[type="submit"]
+      float: right
+      margin-right: 74px

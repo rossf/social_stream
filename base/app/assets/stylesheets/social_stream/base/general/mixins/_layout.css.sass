@@ -1,0 +1,288 @@
+@mixin horizontal-menu 
+  display: inline
+  li
+    display: inline-block
+
+
+@mixin hidden-xs
+  @extend .hidden-xs
+
+@mixin hidden-sm
+  @extend .hidden-sm
+
+@mixin hidden-md
+  @extend .hidden-md
+
+@mixin hidden-lg
+  @extend .hidden-lg
+
+@mixin hidden-phone
+  @extend .hidden-phone  
+
+@mixin hidden-tablet
+  @extend .hidden-tablet
+
+@mixin hidden-desktop
+  @extend .hidden-desktop
+
+@mixin dropdown-log
+  padding: $padding-base-vertical $padding-base-horizontal
+  #username,
+  #password
+    margin-bottom: 10px
+  label.checkbox
+    display: inline
+    padding-left: 0
+    input
+      float: none
+      margin: 0
+  input
+    &[type="submit"]
+      float: right
+  .soften
+    margin: 20px 0px 7px
+    clear: both
+  .options
+    @include options-auth
+
+
+
+@mixin devise-box-style
+  @include box-shadow(0px 1px 1px rgba(50, 50, 50, 0.15))
+  @include border-radius
+  padding: $padding-base-vertical $padding-base-horizontal
+  background-color: $white
+  color: $gray
+  h3, p
+    font-family: $font-family-sans-serif_Light
+
+
+@mixin devise-box-layout
+  @include make-sm-column(6, $gutter: $grid-gutter-width)
+  @include make-md-column(6, $gutter: $grid-gutter-width)
+  @include make-lg-column(6, $gutter: $grid-gutter-width)
+  @include center-block
+  float: none !important
+  display: block
+  h3
+    margin: 0 0 18px 0
+    border-bottom: 1px solid $brand-primary
+  label
+    @extend .caption
+    margin-bottom: 0px
+  input
+    &[type="text"],
+    &[type="email"],
+    &[type="password"]
+      width: 100%
+      margin-bottom: 10px
+  #remember
+    display: inline
+    padding-left: 0
+    color: $gray
+    input
+      float: none
+      margin: 0    
+  input
+    &[type="submit"]
+      float: right
+      display: inline-block
+      margin-bottom: 10px
+  .soften
+    margin: 20px 0px 7px
+    clear: both
+  .options
+    @include options-auth
+
+
+
+@mixin box-style
+  background-color: $white
+  .avatar,
+  .thumb
+    padding: $padding-xs-vertical $padding-xs-horizontal
+    img
+      @include img-responsive
+  .data,
+  .brifing
+    .name,
+    h5
+      color: $black
+      @include text-overflow
+      .x
+        font-size: 12px
+        color: $black
+        a
+          text-decoration: none
+    .info,
+    .author,
+    .frequency
+      font-size: 11px
+      color: #777
+      font-family: $font-family-sans-serif-Light
+  .add
+    @include btn-add
+
+
+@mixin box-layout
+  width: 150px
+  margin: 15px
+  float: left
+  padding: $padding-base-vertical
+  .avatar,
+  .thumb
+    min-height: 55px
+    a
+      float: left
+    .x
+      float: right
+  .data,
+  .brifing
+    display: inline-block
+    margin: 2px 0
+    width: 100%
+    .name,
+    h5
+      width: 100%
+    .info,
+    .author,
+    .frequency
+      z-index: 1
+    a
+      display: inline
+
+  .add
+    margin-top: 2px
+    width: auto
+
+
+@mixin privacity  
+  .relation_list
+    padding-right: 5px
+    border-right: 1px solid #c4c4c4 
+    input
+      &[type="radio"]
+        margin-right: 2px
+    label
+      display: inline-block
+    .actions
+      display: inline-block
+      float: right
+      margin-right: 10px
+      padding-top: 2px
+
+    #new_relation
+      a 
+        float: right
+        margin-right: 10px
+      .new_relation_custom
+        .btn
+          float: right
+          margin: 7px 0px 0 0
+      #relation_custom_name
+        width: 69% !important
+        height: auto
+        margin: -3px 0 0 23px
+
+      .btn
+        margin-left: 32px
+
+  #permissions
+    h4
+      text-align: left
+    li
+      input
+        display: inline
+      label
+        display: inline-block
+
+    .privacity-rules
+      border-top: 1px solid $gray-lighter
+      p
+        word-wrap: break-word
+      .btn
+        float: right
+
+    .postit
+      padding: 100px 0 0 30px
+      width: 250px
+      height: 266px
+      margin-bottom: 12px
+      font-size: 16px
+      font-family: "Giveyouglory"
+      background-image: url(nota.png)
+      @include rotate(-3deg)
+
+@mixin header-tabbable
+  clear: both
+  margin-top: 10px
+  .tab-content
+    overflow: visible
+  ul.nav,
+  ul.nav-tabs 
+    li   
+      &:hover,
+      &:focus
+        background-color: none !important
+        border: none
+        border-bottom: 3px solid $link-color     
+      a             
+        border-left: none
+        border-right: none
+        border-top: none
+        padding: 6px 10px 6px 10px
+        margin-top: 5px
+      i
+        display: inline
+        i.active
+          padding-right: 3px
+        &:hover
+          margin-top: -3px
+      .caption
+        display: inline-block
+        @include hidden-xs
+        @include hidden-sm
+
+    li.active
+      background-color: none !important
+      border: none
+      border-bottom: 3px solid $brand-primary
+      a
+        border-left: none
+        border-right: none
+        border-top: none
+        margin-top: 5px
+        padding: 6px 10px 6px 10px
+
+
+@mixin delete-color
+  &:hover
+    border-bottom-color: $brand-danger
+    i
+      color: $brand-danger
+
+
+
+@mixin form
+  padding: 15px
+  label
+    display: block
+    @extend .caption
+    margin-top: 15px
+    &:first-child
+      margin-top: 0
+  input
+    &[type="text"],
+    &[type="email"], 
+    &[type="tel"],
+    &[type="text"],
+    &[type="password"]
+      width: 100%
+  textarea
+    width: 100%
+    height: 120px
+  input
+    &[type="submit"]
+      float: right
+      margin-top: 6px
+      @extend .btn-primary
