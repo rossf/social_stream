@@ -5,24 +5,37 @@
         :alt => activity.sender_subject.name), activity.sender_subject %>
     </div>
   </div>
-  <header class="media-heading">
-    <%= activity.title(self) %>
-
-    <% if activity.direct_object && !activity.direct_object.acts_as_actor? && can?(:destroy, activity.direct_object) %>
-    <div class="x" style="float: right"> 
-      <%= link_to ('X'), activity.direct_object , :confirm => t('confirm_delete', 
-                    :scope => activity.direct_object.class.to_s.underscore), :method => :delete,  
-                    :remote => true %> 
-    </div>
-    <% end %>
-  </header>
-
   <div class="media-body">
+    <div class="media-heading">
+      <div class="dropdown x">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+          <icon class="fa fa-caret-down"></icon>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu">
+          <%= link_to ('delete'), activity.direct_object , 
+                  :confirm => t('confirm_delete', 
+                  :scope => activity.direct_object.class.to_s.underscore), 
+                  :method => :delete,  
+                  :remote => true %> 
+            <% end %>
+          </div>
+        </div>
+ 
+
+      <%= activity.title(self) %>
+
+      <%= render :partial => 'activities/time_ago',
+               :locals => { :activity => activity } %> 
+
+      <% if activity.direct_object && !activity.direct_object.acts_as_actor? && can?(:destroy, activity.direct_object) %>
+    
+
     <section class="objects">
       <%= render partial: 'activity_objects/timeline', 
                  collection: activity.activity_objects,
                  as: :object %>
     </section>
+    </div>
 
     <%= render :partial => 'activities/actions',
                :locals => { :activity => activity } %>
@@ -37,3 +50,4 @@
                :locals => { :activity => activity } %>
   </div>
 <% end %>
+  
