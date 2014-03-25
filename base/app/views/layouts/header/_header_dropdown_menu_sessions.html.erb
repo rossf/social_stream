@@ -2,7 +2,11 @@
 
 <% if representations.present? %>
   <li class="dropdown-submenu pull-left">
-    <%= link_to t('representation.switch'), "#", tabindex: "-1" %>
+    <%= link_to "#", tabindex: "-1" do %>
+      <i class='fa fa-exchange' title="<%= t 'representation.switch' %>">
+        <%= t 'representation.switch' %>
+      </i>
+    <% end %> 
     <ul class="dropdown-menu dropdown-menu-header">
       <% representations.each do |representation| %>
       <li>

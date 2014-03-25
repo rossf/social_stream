@@ -34,9 +34,9 @@
     </script>
   </head>
   
-  <body>
+  <body data-spy="scroll" data-target=".menu-toolbar">
+    <%= render :partial => "layouts/header/header" %>
     <div class="wrapper container-fluid">
-      <%= render :partial => "layouts/header" %>
 
       <%= flashy %>
 
