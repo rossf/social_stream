@@ -1,29 +1,14 @@
-= Social Stream: a framework for building social network websites
+= {Social Stream}[https://github.com/ging/social_stream] 
 
-Social Stream is an engine for Ruby on Rails. It provides a robust and flexible framework
-with {social networking}[http://en.wikipedia.org/wiki/Social_network] features and {activity streams}[http://activitystrea.ms/] for building websites.
+Social Stream is a framework for building social network websites (engine for Ruby on Rails). 
+It provides a robust and flexible framework with {social networking}[http://en.wikipedia.org/wiki/Social_network] features and {activity streams}[http://activitystrea.ms/] for building websites.
 
-{<img src="https://badge.fury.io/rb/social_stream.png" />}[http://rubygems.org/gems/social_stream]
-{<img src="https://codeclimate.com/github/ging/social_stream.png" />}[https://codeclimate.com/github/ging/social_stream]
-{<img src="https://secure.travis-ci.org/ging/social_stream.png" />}[http://travis-ci.org/ging/social_stream]
 
-= Social Stream components
+= What's new ?
 
-Social Stream is divided into components. Developers can customize their social
-network with the functionalities they need for each case. Check {current Social Stream components in Social Stream's website}[http://social-stream.dit.upm.es/started#components]
+- Hundreds of improvements over the previous {version of Bootstrap}[https://github.com/twbs/bootstrap/releases].
 
-= Installation
+- The iconic font designed for Bootstrap {Font awesome}[http://fontawesome.io/]
 
-There is a {detailed guide in Social Stream's website}[http://social-stream.dit.upm.es/started] on how to get started, install Social Stream in your Rails application and customize it.
+- New visual style, folders organization, svg optimization, best Sass use (new call files, typography, optimization code lines..). Working on it! (only frontpage and devise stable.. at the momment dont use responsive files!!)
 
-= Documentation
-
-{Social Stream's wiki}[https://github.com/ging/social_stream/wiki] covers topics such as deployment howtos, development tips or an explanation of the database schema.
-
-Furthermore, {Social Stream's code documentation is available at rdoc.info}[http://rubydoc.info/gems/social_stream/frames]. Most of the stuff is in {the base gem}[http://rubydoc.info/gems/social_stream-base/frames].
-
-= Discussion and contribution
-
-If you have any questions or issues regarding Social Stream usage, {Social Stream's Google group}[http://groups.google.com/group/social-stream] is a perfect place to share them. Other experienced users of Social Stream will be willing to help you. There exist also a {social-stream tag in StackOverflow}[http://stackoverflow.com/questions/tagged/social-stream]
-
-{Social Stream's issue tracker}[https://github.com/ging/social_stream/issues] is reserved to discuss defects and contributions. Please do not post questions in the issue tracker.
