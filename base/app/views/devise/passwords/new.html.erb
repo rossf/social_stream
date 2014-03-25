@@ -1,5 +1,5 @@
 <section id="forgot-pass">
-  <section class="forgot">
+  <div class="forgot-pass">
     <header>
       <h3>
         <%= t('devise.passwords.forgot') %>
@@ -10,23 +10,18 @@
 
       <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
         <%= devise_error_messages! %>
+    </header>  
 
-      <h4>
-        <%= t('devise.passwords.instructions') %>
-      </h4>
-    </header>
+    <%= f.label :email %>
 
-    <section class="password">
-      <%= f.label :email %>
-
-      <%= f.text_field :email, :class => "form_tag" %>
-        
-      <%= f.submit t('action.send') %>
+    <%= f.text_field :email, :class => "form_tag" %>
       
-      <hr class="soften">
+    <%= f.submit t('action.send'), :class =>"btn btn-primary" %>
+    
+    <hr class="soften">
 
-      <%= render :partial => "devise/shared/links" %>
-    </section>
+    <%= render :partial => "devise/shared/links" %>
+ 
     <% end %>
-  </section>
+  </div>
 </section>
