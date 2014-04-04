@@ -1,9 +1,10 @@
 @import "fullcalendar"
 
 #calendar
-  @include grid-core-span(10, $fluidGridColumnWidth, $fluidGridGutterWidth)
-  float: left
-  margin-left: 2.5%
+  @include make-xs-column(12, $gutter: $grid-gutter-width)
+  @include make-sm-column(12, $gutter: $grid-gutter-width)
+  @include make-md-column(10, $gutter: $grid-gutter-width)
+  @include make-lg-column(10, $gutter: $grid-gutter-width)
   .fc-button.fc-state-default 
     position: relative
 

@@ -4,21 +4,20 @@
 .documents
   .central
     .show
-      @include border-radius(10px)
+      @include border-radius
       border: 1px solid #f7f7f7
-      @include gradient-radial ($innerColor: #666, $outerColor: #333)
       text-align: center
       h6
         color: $white
         font-size: 15px
       .actions
         border: 1px solid #333
-        @include border-radius (3px)
+        @include border-radius
         border-bottom-color: #444
         background-color: rgba(50, 50, 50, 0.3)
       .video
         .video-container
-          @include centered
+          @include center-block
           width: 100%
           .jp-type-single
             .jp-player
@@ -59,15 +58,15 @@
 
             .tooltip
               @include opacity (90)
-              @include border-radius (5px)
+              @include border-radius
               background: $gray
               color: whitesmoke
               .audience_logo
                 img
-                  @include border-radius (5px)
+                  @include border-radius
 
   .details
-    @extend .hidden-phone
+    @extend .hidden-xs
     h4
       color: #999
       font-size: 15px
@@ -77,14 +76,14 @@
           a
             background-color: #f3f3f3 
     .tab-content
-      color: $blue
+      color: $brand-primary
       border-left: 1px solid #dddddd
       background-color: #f3f3f3
 
 
 #document-info
   .counters
-    color: $grayLight
+    color: $gray-light
     .counter
       color: #00C3FF
       font-sixe: 15px
@@ -96,6 +95,5 @@
     form.new_comment
       input
         &[type="submit"]
-          @include btn-secundary
 
      

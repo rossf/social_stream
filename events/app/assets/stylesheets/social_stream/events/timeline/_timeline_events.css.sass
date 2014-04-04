@@ -3,7 +3,7 @@
     .media-body
       .event
         .date
-          background-color: white
+          background-color: $white
           text-align: center
           .day,
           .month
@@ -28,16 +28,15 @@
 
           input
             &[type="submit"]
-              @include border-radius (7px)
-              border: 1px solid #888
-              color: #888
-              @include btn-primary
+              @include border-radius
+              border: 1px solid $gray-dark
+              color: $gray-dark
 .modal
   .modal-body
     .event
-      border-bottom: 1px solid #ccc
+      border-bottom: 1px solid $gray
       .date
-        background-color: white
+        background-color: $white
         text-align: center
         .day,
         .month
@@ -61,6 +60,5 @@
           font-size: 12px
   .modal-footer
     button
-      @include btn-primary
-      @include border-radius (5px)
+      @include border-radius
 

@@ -27,14 +27,14 @@
           color: $gray
           text-decoration: none
       .today
-        @include border-radius(15px)
-        border: 1px solid $blue !important
+        @include border-radius
+        border: 1px solid $brand-primary !important
         a
-          color: $blue 
+          color: $brand-primary
       .busy
         font-weight: bold
-        @include border-radius(5px)
-        border: 1px solid #c4c4c4
+        @include border-radius
+        border: 1px solid $gray
         background-color: $white
       .past
         @include opacity (70)
@@ -44,7 +44,7 @@
 .fc-content
   .fc-cell-overlay,
     @include opacity (40)
-    color: $blue
+    color: $brand-primary
 
 .fc-state-highlight
   background-color: rgba(4,156,219,0.2)

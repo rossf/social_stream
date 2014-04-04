@@ -53,14 +53,13 @@
         display: inline
         @include size (40px, 40px)
       .gereral-info
-        @include grid-core-span(10, $fluidGridColumnWidth, $fluidGridGutterWidth)
         float: left
         margin-top: -50px
         h4
           margin-bottom: 0px
           font-size: 18px
-          color: $principalColor
-          font-family: $serifFontFamily 
+          color: $brand-primary
+          font-family: $font-family-sans-serif
         .name,
         .url,
         .users
@@ -77,8 +76,7 @@
           color: #929292
           font-size: 17px
       .btn-group
-        @include btn-primary
-        @include border-radius(5px)
+        @include border-radius
         @include btn-add
         float: right
         .dropdown-menu
@@ -90,7 +88,7 @@
             h6
               border-bottom: 1px solid #CCC
               a
-                color: $principalColor !important
+                color: $brand-primary !important
           li.client-secret
             p
               word-break: break-all

@@ -1,10 +1,9 @@
 @import "jquery.ui.chatbox"
 
 .ui-chatbox
-  @include border-top-left-radius (5px)
   @mixin box-shadow($gray)
   background: #f2f2f2
-  border: 1px solid $grayLighter
+  border: 1px solid $gray-lighter
   right: 1px
   position: fixed
   z-index: 10000
@@ -22,5 +21,5 @@
 .ui-chatbox-input
   border: none
   textarea
-    border: 1px solid $grayLight
+    border: 1px solid $gray-light
     height: 22px

@@ -4,7 +4,6 @@
     input
       &[type="submit"]
         float: right
-        @include btn-primary
   .users_connected
     display: block
     padding-left: 17px
@@ -15,7 +14,6 @@
       .presence_status
         width: 20px
 .chat_wrapper
-  @include makeColumn(2, 0)
 
 #status,
 #statusList
@@ -33,13 +31,13 @@
         @include size(12px, 12px)
         padding: 0px
       .available
-        background-color: $green
+        background-color: $brand-success
       .away
-        background-color: $orange
+        background-color: $brand-warning
       .dnd
-        background-color: $red
+        background-color: $brand-danger
       .offline
-        background-color: $blue
+        background-color: $brand-primary
 #statusList
   @include box-shadow (0px 4px 6px #c4c4c4)
   margin-left: -11px !important
