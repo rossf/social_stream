@@ -4,11 +4,11 @@
 
   <section class="site_clients">
     <header>
-      <h3>
-        <%= link_to t('site.client.new.link'), polymorphic_path(resource_class.new, action: 'new'), class: "new_site_client-modal-link", 'data-toggle' => 'modal'  %>
-        
+      <h5 class="lead"> 
         Applications
-      </h3>
+      </h5>
+      <%= link_to t('site.client.new.link'), polymorphic_path(resource_class.new, action: 'new'), class: "btn btn-primary new_site_client-modal-link", 'data-toggle' => 'modal'  %>
+        
     </header>
     <div class="tabbable"> <!-- Only required for left/right tabs -->
       <ul class="nav nav-tabs">

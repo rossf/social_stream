@@ -1,11 +1,11 @@
-<div class="accordion">
-  <header class="accordion-heading">
-    <h5>
+<div id="destroy_settings" class="panel panel-default">
+  <header class="panel-heading">
+        <h5 class="panel-title">
       <%= link_to t("#{ current_subject.class.to_s.underscore }.destroy.one"), "javascript:void(0);", class: 'accordion-toggle', "data-toggle" => 'collapse', "data-parent" => "#settings-accordion", "data-target" => "#destroy_settings_content" %>
     </h5>
   </header>
   <div class="content settings_content collapse" id="destroy_settings_content">
-    <div class="form_row">
+    <div class="settings_block">
       <%= t("#{ current_subject.class.to_s.underscore }.destroy.explanation") %>
       <%= link_to t("#{ current_subject.class.to_s.underscore }.destroy.go_ahead"),
           current_subject,
@@ -14,4 +14,3 @@
     </div>
   </div>
 </div>
-

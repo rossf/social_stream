@@ -1,7 +1,7 @@
 <section class="permissions">
-  <h4>
+  <h5 class="lead">
     <%= raw t('permission.of_relation.choose', :name => h(@relation.name)) %>
-  </h4>
+  </h5>
 
   <% if can? :update, @relation %>
 

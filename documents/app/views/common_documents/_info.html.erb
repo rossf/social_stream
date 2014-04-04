@@ -1,50 +1,63 @@
-<div class="info">
-  <%= render partial: 'objects/counters', locals: { object: document } %>
+<%= link_to document.author.subject, :class => "author" do %>
+  <%= image_tag document.author.logo.url(:small), :class => "avatar" %>
+  <%= truncate_name(document.author.name, :length => 50) %>
+<% end %>
 
-  <div class="description <%= 'blank' if document.description.blank? %>">
-    <h4>
-      <%= t 'document.info.description' %>
-    </h4>
+<%= render partial: 'objects/counters', locals: { object: document } %>
 
-    <%= document.description %>
-  </div>
-
-  <div class="tags">
-    <h4>
-      <%= t 'document.info.tags' %>
-    </h4>
-
-    <%= tag_list document %>
-  </div>
-
-  <div class="autor">
-    <h4>
-      <%= t 'document.info.author' %>
-    </h4>
-
-    <%= link_to document.author_subject.name, document.author_subject %>
-  </div>
-
-  <div class="dates">
-    <h4>
-      <%= t('document.info.date.created_at') %>
-    </h4>
-    <div class="date">
-      <%= I18n.localize document.created_at, :format => :long %>
+<div class="panel-group" id="accordion">
+  <div class="panel">
+    <header>
+      <h3>
+        <%= document.title %>
+      </h3>
+    </header>
+    <div id="collapseInfo" class="panel-collapse collapse">
+      <div class="panel-body">
+        <table class="table table-hover">
+          <tr class="<%= 'blank' if document.description.blank? %>">
+            <td>
+              <%= t 'document.info.description' %>
+            </td>
+            <td>
+              <%= document.description %>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <%= t 'document.info.tags' %>
+            </td>
+            <td>
+              <%= tag_list document %>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <%= t('document.info.date.created_at') %>
+            </td>
+            <td>
+              <%= I18n.localize document.created_at, :format => :long %>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <%= t('document.info.date.updated_at') %>
+            </td>
+            <td>
+              <%= I18n.localize document.updated_at, :format => :long %>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <%= t('document.info.size') %>
+            </td>
+            <td>
+              <%= number_to_human_size document.file_file_size %>
+            </td>
+          </tr>
+        </table>
+      </div>
     </div>
-
-    <h4>
-      <%= t('document.info.date.updated_at') %>
-    </h4>
-    <div class="date">
-      <%= I18n.localize document.updated_at, :format => :long %>
-    </div>
-
-    <div class="file_size">
-      <h4>
-        <%= t('document.info.size') %>
-      </h4>
-      <%= number_to_human_size document.file_file_size %>
-    </div>         
-  </div>
+  </div> 
 </div>
+<a class="expand" data-toggle="collapse" data-parent="#accordion" href="#collapseInfo">--- Expandir ---</a>

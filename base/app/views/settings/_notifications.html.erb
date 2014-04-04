@@ -1,6 +1,6 @@
-<div id="notifications_settings" class="accordion-group">
-  <header class="accordion-heading">
-    <h5>
+<div id="notifications_settings" class="panel panel-default">
+  <header class="panel-heading">
+        <h5 class="panel-title">
       <%= link_to t('settings.notifications.briefing'),  "javascript:void(0);", class: 'accordion-toggle', "data-toggle" => 'collapse', "data-parent" => "#settings-accordion", "data-target" => "#notifications_settings_content" %>
     </h5>
   </header>
@@ -25,7 +25,7 @@
     <% end %>
 
     <%= hidden_field_tag :settings_section, :notifications %>
-    <%= submit_tag "Update Settings", :class => "btn" %>
+    <%= submit_tag "Update Settings", :class => "btn btn-primary" %>
     <% end %>
   </div>
 </div>

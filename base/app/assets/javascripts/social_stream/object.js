@@ -3,7 +3,7 @@
 
 SocialStream.Object = (function(SS, $, undefined){
   var callback = new SS.Callback(),
-      pIcon = '<i class="icon_tool16-private"></i>';
+      pIcon = '<i class="fa fa-lock"></i>';
 
 
   var initRelationSelect = function(options){

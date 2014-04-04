@@ -1,7 +1,5 @@
 <div class="notifications">
-  <h1 class="colorfont">
-    <%= t('notification.other') %>
-  </h1>
+  <h5 class="lead"><%= t('notification.other') %></h5>
 
   <div class="read_all">
     <%= link_to(t('notification.read_all'), update_all_notifications_path(:page => params[:page]),

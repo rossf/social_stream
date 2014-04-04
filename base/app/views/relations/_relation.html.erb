@@ -8,13 +8,13 @@
   <div class="actions">
     <% if can? :edit, relation %>
       <%= link_to 'javascript:void(0);', class: "edit" do %>
-        <i class="icon_tool16-edit"></i>
+        <i class="fa fa-edit"></i>
       <% end %>
     <% end %>
 
     <% if can? :delete, relation %>
       <%= link_to relation, class: "delete", method: :delete, confirm: t('relation_custom.confirm_delete'), remote: true do %>
-        <i class="icon_tool16-trash"></i>
+        <i class="fa fa-trash-o"></i>
       <% end %>
     <% end %>
   </div>
@@ -25,7 +25,7 @@
         <%= f.text_field :name %>
 
         <%= link_to '#', class: "submit" do %>
-          <i class="icon_tool16-ok"></i>
+          <i class="fa fa-check"></i>
         <% end %>
       <% end %>
     </div>

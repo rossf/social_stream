@@ -4,19 +4,18 @@
 
 <section id="administrators">
   <header>
-    <h3>
+    <h3><%= t('administrators.index.title') %></h3>
     <%= render  partial: 'contacts/add_button',
                 locals: {
                 sender: Site.current,
                  type: [ :user ]
                }
     %>
-    <%= t('administrators.index.title') %></h3>
   </header>
 
-  <section class="administrators">
+  <div class="administrators-list well">
 
     <%= render partial:    'contacts/contact',
                collection: Site.current.sent_contacts.reload.first(12) %>
-  </section>
+  </div>
 </section>

@@ -1,31 +1,24 @@
-div.repository,
-.documents
-  float: left
-  margin-left: 2.5%
-
-section.repository
-  display: block
-  clear: both
-
 #repository
-  
-  .repository_show
-    display: inline
-  input
-    &[type="text"]
-      width: 24% !important
+  div.repository
+    input
+      &[type="text"]
+        width: 24% !important
+        display: inline
+        margin-top: 20px
+        float: left
+        margin-left: 20px
+    .btn
+      float: right
+      width: auto
+      display: inline-block
+      margin: 23px 16px 0 -14px
+    .repository_show
       display: inline
-      margin-top: 20px
-      float: left
-      margin-left: 20px
-   
-  .btn
-    float: right
-    width: auto
-    display: inline-block
-    margin: 23px 16px 0 -14px
-  .tab-content
-    padding-bottom: 100px
+
+    .tab-content
+      min-height: 400px
+  section.repository
+    clear: both
   
   .repository-list
     .document,
@@ -49,20 +42,7 @@ section.repository
     .new_comment
       margin-left: 44px
 
-.documents
 
-  input
-    &[type="text"]
-      width: 24% !important
-      display: inline
-      margin-top: 20px
-      float: left
-      margin-left: 20px
-  .btn
-    float: right
-    width: auto
-    display: inline-block
-    margin: 23px 16px 0 -14px
 
 #new_document-modal
   .modal-body

@@ -150,7 +150,7 @@
 		})
 		.appendTo(uiChatboxTitlebar),
 	    uiChatboxTitlebarCloseText = $('<span></span>')
-		.addClass('icon_tool16-trash ' + 'chat-thick ' + 'chat-closethick')
+		.addClass('fa fa-times-circle-o ' + 'chat-thick ' + 'chat-closethick')
 		.appendTo(uiChatboxTitlebarClose),
 	    uiChatboxTitlebarMinimize = (self.uiChatboxTitlebarMinimize = $('<a href="#"></a>'))
 		.addClass('ui-corner-all ' + 
@@ -171,7 +171,7 @@
 		})
 		.appendTo(uiChatboxTitlebar),
 	    uiChatboxTitlebarMinimizeText = $('<span></span>')
-		.addClass('icon_tool16-less ' +  'chat-thick ' + ' chat-minusthick')
+		.addClass('fa fa-minus-circle ' +  'chat-thick ' + ' chat-minusthick')
 		.appendTo(uiChatboxTitlebarMinimize),
 	    
 			//Video Menu button

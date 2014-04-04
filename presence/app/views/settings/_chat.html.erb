@@ -1,6 +1,6 @@
-<div id="chat_settings" class="accordion-group">
-  <header class="accordion-heading">
-    <h5>      
+<div id="chat_settings" class="panel panel-default">
+  <header class="panel-heading">
+    <h5 class="panel-title">   
       <%= link_to t('chat.title'),  "javascript:void(0);", class: 'accordion-toggle', "data-toggle" => 'collapse', "data-parent" => "#settings-accordion", "data-target" => "#chat_settings_content" %>
     </h5>
   </header>
@@ -14,7 +14,7 @@
         <%= label_tag(:enable_chat, t('chat.settings.checkbox')) %> 
         <div class="actions center">
           <%= hidden_field_tag :settings_section, :chat %>
-          <%= submit_tag t('chat.settings.update'), :class => "btn" %>
+          <%= submit_tag t('chat.settings.update'), :class => "btn btn-primary" %>
         </div>
       </li>
     </ul>

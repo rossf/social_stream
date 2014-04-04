@@ -2,16 +2,17 @@
 
 .ui-chatbox
   @mixin box-shadow($gray)
-  background: #f2f2f2
+  background: $body-bg
   border: 1px solid $gray-lighter
   right: 1px
   position: fixed
-  z-index: 10000
-  width: 15.85714% !important
+  z-index: $zindex-chat
+  width: 220px !important
 
 .ui-chatbox-titlebar,
 .ui-widget-content
   width: 98%
+  @include center-block
 
 .ui-chatbox-titlebar
   a

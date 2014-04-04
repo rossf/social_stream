@@ -3,6 +3,9 @@
 <section class="contact" id="<%= dom_id contact %>">
   <div class="avatar">
     <%= link_to(image_tag(contact.receiver.logo.url(:small)), contact.receiver_subject) %>
+    <div class="x">
+      <%= link_to 'X', contact_path(contact, destroy_params), method: :delete, remote: true, confirm: t('contact.confirm_delete') %>
+    </div>
   </div>
 
   <div class="data">
@@ -17,9 +20,6 @@
   <div class="add">
     <%= contact_button(contact) %>
   </div>
-  <div class="x">
-        <%= link_to 'X', contact_path(contact, destroy_params), method: :delete, remote: true, confirm: t('contact.confirm_delete') %>
-      </div>
 </section>
 
 

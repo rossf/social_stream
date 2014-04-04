@@ -3,10 +3,9 @@
 <% end %>
 
 <%= render partial: 'toolbar/profile', locals: { :subject => profile_or_current_subject } %>
+
 <div class="documents">
-  <h1 class="colorfont">
-    <%= t 'document.title.other' %>
-  </h1>
+  <h1><%= t 'document.title.other' %></h1>
 
   <%= render partial: 'common_documents/filter' %>
 

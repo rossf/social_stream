@@ -1,4 +1,4 @@
-<%= image_tag 'step_2.png' %>
+<%= image_tag 'step_2.png', class: "step" %>
 
 <section class="create_logo_app">
   <h4>Set the application's logo</h4>
@@ -7,5 +7,5 @@
              object: resource.actor,
              as: :avatarable %>
 
-  <%= link_to "Next", polymorphic_path(resource, action: 'edit', step: 3), class: "next-step" %>
+  <%= link_to "Next", polymorphic_path(resource, action: 'edit', step: 3), class: "btn btn-primary next-step" %>
 </section>

@@ -1,14 +1,16 @@
 <section id="contacts">
   <%= render partial: 'toolbar/profile', locals: { :subject => profile_or_current_subject } %>
 
-  <div class="contacts tabbable">
-    <ul class="nav nav-tabs">
-      <% profile_or_current_subject.class.contact_index_models.each do |type| %>
-        <li class="<%= 'active' if current_contact_section?(type) %>">
-          <a data-toggle="tab" href="#<%= type %>" data-path="<%= contacts_path %>"<%= raw ' data-loaded="true"' if current_contact_section?(type) %>><%= t "#{ type }.title", count: :other %></a>
-        </li>
-      <% end %>
-    </ul>
+  <div class="contacts">
+    <div class="tabbable">
+      <ul class="nav nav-tabs">
+        <% profile_or_current_subject.class.contact_index_models.each do |type| %>
+          <li class="<%= 'active' if current_contact_section?(type) %>">
+            <a data-toggle="tab" href="#<%= type %>" data-path="<%= contacts_path %>"<%= raw ' data-loaded="true"' if current_contact_section?(type) %>><%= t "#{ type }.title", count: :other %></a>
+          </li>
+        <% end %>
+      </ul>
+    </div>
 
     <div class="tab-content">
 

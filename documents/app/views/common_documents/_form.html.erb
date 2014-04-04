@@ -16,24 +16,20 @@
       </ul>
     </div>
 
-    <section class="upload">
-      <%= f.label :file, t('document.info.file') %>
-      <%= f.file_field :file %>
-    </section>
-    <section class="title">
-      <%= f.label :title, t('document.info.title') %>
-      <%= f.text_field :title %>
-    </section>
-    <section class="description">
-      <%= f.label :description, t('document.info.description') %>
-      <%= f.text_area :description %>
-    </section>
-    <section class="tags">
-      <%= f.label :tag_list, t('document.info.tags') %>
-      <%= f.text_field :tag_list, 'data-path' => tags_path(format: 'json') %>
-    </section>
+    <%= f.label :file, t('document.info.file') %>
+    <%= f.file_field :file %>
 
-    <%= f.submit :class => "btn" %>
+    <%= f.label :title, t('document.info.title') %>
+    <%= f.text_field :title %>
+
+    <%= f.label :description, t('document.info.description') %>
+    <%= f.text_area :description %>
+ 
+    <%= f.label :tag_list, t('document.info.tags') %>
+    <%= f.text_field :tag_list, 'data-path' => tags_path(format: 'json') %>
+
+
+    <%= f.submit :class => "btn btn-primary" %>
   <% end %>
 
   <%= javascript_tag do %>
