@@ -1,53 +1,53 @@
 @import "jquery.cleditor"
 
 #conversations
-  #toolbar
-  .conversations
-    .conversation
-      .content_left
-        width: 220px
-        h5 
-          a
-            @include text-overflow
-        .date
-          color: #888
+  .content_left
+    width: 220px
+    h5 
+      a
+        @include text-overflow
+    .date
+      color: #888
+    h5,
+    .date
+      font-size: 14px
 
-      .content_right
-        color: $gray
-        .subject
-          font-weight: normal
-          @include text-overflow
-          a
-            font-weight: bold
-            &:hover
-              text-decoration: none
-        .briefing
-          @include text-overflow
-          color: $gray
-        .date
-          color: $gray
-        .action
-          a:link
-            color: $gray
-          a:hover
-            color: $brand-primary
-            text-decoration: none
+  .content_right
+    color: $gray
+    .subject
+      font-weight: normal
+      @include text-overflow
+      a
+        font-weight: bold
+        &:hover
+          text-decoration: none
+    .briefing
+      @include text-overflow
+      color: $gray
+      font-family: $font-family-sans-serif_Light
+
+    .date
+      color: $gray
+  .action
+    a:link
+      color: $gray
+    a:hover
+      color: $brand-danger
+      text-decoration: none
 
 
   
 #ck_editor
   .cleditorMain
     @include border-radius
-.conversations
-  .conversation
-    @include opacity (50)
 
 .unread
-  @include opacity (100)
+  background-color: $white
 
 .conversation_full
   h3
     @include text-overflow
+    font-family: $font-family-sans-serif_Light
   .participants
     @include border-radius
     background-color: #f1f1f1

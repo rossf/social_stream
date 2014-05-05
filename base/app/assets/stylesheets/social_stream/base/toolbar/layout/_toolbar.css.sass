@@ -74,6 +74,13 @@
       float: left
     @media (max-width: $screen-sm-min)
       float: left
+      display: inline
+      background: #F00
+      width: 39%
+      margin: 0 5%
+      img
+        @media (max-width: $screen-sm-min)
+          width: 100%
     .subject-name
       @include hidden-xs
     .subject-name-phone
@@ -106,6 +113,9 @@
 
 .toolbar-profile
   .toolbar_menu
+    @media (max-width: $screen-sm-min)
+      width: 45%
+      display: inline-block
     ul
       li
         padding: 4px 7px

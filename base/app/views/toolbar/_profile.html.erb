@@ -3,20 +3,9 @@
     <%= render partial: 'toolbar/logo',
                locals: { subject: subject } %>
 
-    <% if current_subject.present? && subject != current_subject %>
-    <div class="contact-button">
-      <%= contact_button subject %>
-    </div>
-    <% end %>
-
   </div>
 
   <nav class="toolbar_menu">
-    <ul class="list-group">
-      <li class="list-group-item">
-        <%= link_to [ subject, :profile ] do  %>
-          <i class='fa fa-info'></i> <%= t 'menu.information' %>
-        <% end %>
       </li>
 
       <% if SocialStream.repository_models.present? %>
@@ -35,6 +24,16 @@
         </li>
       <% end %>
     </ul>
+    <% if current_subject.present? && subject != current_subject %>
+      <div class="contact-button">
+        <%= contact_button subject %>
+      </div>
+    <% end %>
+    <ul class="list-group">
+      <li class="list-group-item">
+        <%= link_to [ subject, :profile ] do  %>
+          <i class='fa fa-info'></i> <%= t 'menu.information' %>
+        <% end %>
   </nav>
 
   <%= render partial: 'toolbar/contacts', locals: { subject: subject } %>

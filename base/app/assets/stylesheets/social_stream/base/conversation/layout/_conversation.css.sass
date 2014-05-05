@@ -1,62 +1,61 @@
 @import "jquery.cleditor"
 .conversations
+  @include make-row()
+  margin: $zero
   .conversation
+    @include make-xs-column(12, $gutter: $grid-gutter-width)
+    @include make-sm-column(12, $gutter: $grid-gutter-width)
+    @include make-md-column(12, $gutter: $grid-gutter-width)
+    @include make-lg-column(12, $gutter: $grid-gutter-width)
     min-height: 65px
     margin-bottom: 5px
-    clear: both
     .content_left
       width: 220px
       .avatar
         float: left
         padding-right: 10px
+        width: 40px
       header
         float: left
-        width: 65%
         h5
-          margin-top: 0
-          margin-bottom: 0  
+          margin-top: $zero
+          margin-bottom: $zero  
           
     .content_right
-      float: left
-      margin: 0 0 15px 15px
+      margin: $zero $zero 15px 15px
       display: inline-block
       @include make-xs-column(12, $gutter: $grid-gutter-width)
-      @include make-sm-column(8, $gutter: $grid-gutter-width)
+      @include make-sm-column(12, $gutter: $grid-gutter-width)
       @include make-md-column(9, $gutter: $grid-gutter-width)
       @include make-lg-column(9, $gutter: $grid-gutter-width)
+      @media (max-width: $screen-sm-min)
+        margin: $zero
+        padding-left: $zero
       .subject
         font-size: 14px
-        width: 85%
 
-      .briefing
-        width: 85%
-        font-family: $font-family-sans-serif_Light
-      .date
-        display: inline
-        margin: 0 13px 0 4px
-
-      .action
-        float: right
-        margin-top: -10px
+    .action
+      float: right
+      @media (max-width: $screen-sm-min)
+        position: fixed
+        width: 100%
+        text-align: right
+        padding-right: 32px
      
 
 form.new_message
-
   margin-left: 20px
   .btn
-    margin: 17px 10px 0 0
+    margin: 17px 10px $zero $zero
 
   
 #ck_editor
   .cleditorMain
     width: 100%!important
-.conversations
+
  
 #conversation
   .conversation_full
-
-    h4
-      font-family: $font-family-sans-serif_Light
     .participants
       padding: 7px 10px 9px 10px
       border: 1px solid #f1f1f1
@@ -68,12 +67,12 @@ form.new_message
       float: right
       margin-top: 18px
     .soften
-      margin: 0px
+      margin: $zero
 
     .cont_conversation
       .cleditorMain
         width: 100% !important
-        padding: 0px
+        padding: $zero
       .actions
         margin-top: 10px
         input
@@ -82,7 +81,7 @@ form.new_message
 
 
   .message
-    padding: 15px 0 10px
+    padding: 15px $zero 10px
     .media
       margin-left: 20px
 
@@ -99,13 +98,8 @@ form.new_message
 
 #new_message
   #conversation
-    @media (min-width: $screen-md-min)
-      width: 75%
-    h2
-      @include hidden-xs
-      @include hidden-sm
     form
-      margin: 0 auto !important
+      margin: $zero auto !important
       float: none !important
       padding: 15px 15px 58px
       background: $white
@@ -120,10 +114,7 @@ form.new_message
           border-left: none
           border-right: none
           border-bottom: none
-          box-shadow: none
-          -webkit-border-radius: 0px
-          -moz-border-radius: 0px
-          border-radius: 0px
+          
       .cleditorMain
         border: 1px solid #D5D5D5
         .cleditorToolbar

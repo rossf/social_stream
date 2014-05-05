@@ -1,6 +1,7 @@
 <div class="conversations">
-  <%= render @conversations %>
-
+  <div class="list-group">
+  	<%= render @conversations %>
+  </div>
   <%= render partial: 'layouts/more',
              locals: {
                path: conversations_path,
