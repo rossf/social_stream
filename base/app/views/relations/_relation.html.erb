@@ -1,8 +1,9 @@
-<%= div_for relation do %>
+<%= div_for relation, :class => 'radio' do %>
   <%= radio_button_tag :relation,
     relation.id,
     false,
-    :id => "input_#{ dom_id relation }" %>
+    :id => "input_#{ dom_id relation }"
+  %>
   <%= label_tag "input_#{ dom_id relation }", relation.name %>
 
   <div class="actions">

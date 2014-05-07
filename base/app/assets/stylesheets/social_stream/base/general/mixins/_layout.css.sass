@@ -159,12 +159,13 @@
 @mixin privacity  
   .relation_list
     padding-right: 5px
-    border-right: 1px solid #c4c4c4 
+    border-right: 1px solid #c4c4c4
+    @media (max-width: $screen-xs-min)
+      border-right: none 
     input
       &[type="radio"]
-        margin-right: 2px
-    label
-      display: inline-block
+        margin: 0px 2px $zero -20px
+
     .actions
       display: inline-block
       float: right
@@ -191,8 +192,6 @@
     h4
       text-align: left
     li
-      input
-        display: inline
       label
         display: inline-block
 

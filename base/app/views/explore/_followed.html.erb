@@ -1,16 +1,12 @@
-<section class="content">
-  <div class="case">
-    <nav class="first-line-mini">
-      <%= link_to actor.name, actor.subject %>
-    </nav>
-    <section class="second-line"> 
-      <%= actor.description %>
-    </section>
-  </div>
-  <aside class="well well-small">
-    <div class="top">
-      <%= t 'follower.n', count: actor.follower_count %>
-    </div>
-  </aside>
-</section>
+<li class="list-group-item">
+  <span class="badge">
+    <%= t 'follower.n', count: actor.follower_count %>
+  </span>
+  <nav class="first-line-mini">
+    <%= link_to actor.name, actor.subject %>
+  </nav>
+  <section class="second-line"> 
+    <%= actor.description %>
+  </section>
+</li>
 
