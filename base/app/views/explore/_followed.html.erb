@@ -1,12 +1,11 @@
 <li class="list-group-item">
   <span class="badge">
-    <%= t 'follower.n', count: actor.follower_count %>
-  </span>
-  <nav class="first-line-mini">
-    <%= link_to actor.name, actor.subject %>
-  </nav>
-  <section class="second-line"> 
-    <%= actor.description %>
-  </section>
+      <%= t 'follower.n', count: actor.follower_count %>
+    </span>
+  <%= link_to(actor.subject) do %>
+    <strong><%= actor.name %></strong>
+    <p>
+      <%= actor.description %>
+    </p>
+  <% end %>
 </li>
-

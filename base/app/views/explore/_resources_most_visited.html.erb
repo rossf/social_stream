@@ -1,9 +1,7 @@
 <li class="list-group-item">      
-  <nav class="first-line-large">
-    <%= link_to object.title, object.object %>
-  </nav>
-  <section class="second-line">
-    <%= object.description %>
-  </section>
+  <%= link_to(object.object) do %>
+    <header><strong><%= object.title %></strong></header>
+    <p><%= object.description %></p>
+  <% end %>
 </li>
 

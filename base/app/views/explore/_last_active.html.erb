@@ -1,11 +1,8 @@
 <li class="list-group-item">
-       
-    <header class="first-line-large">
-      <%= link_to object.name, object %>
-    </header>
-
-    <div class="second-line">
+  <%= link_to(object) do %>
+    <header><strong class="name"><%= object.name %></strong></header>
+    <p>
       <%= t 'time.ago', time: time_ago_in_words(object.updated_at) %>
-    </div>
-
+    </p>
+  <% end %>
 </li>

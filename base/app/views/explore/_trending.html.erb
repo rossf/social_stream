@@ -1,14 +1,11 @@
-<li class="list-group-item">  
+<li class="list-group-item">
   <span class="badge">
-    <%= t 'like.n', count: object.like_count %>
-  </span>    
-  <nav class="first-line-large">
-    <%= link_to object.object.title, object.object %>
-      / 
-    <%= link_to object.author_subject.name, object.author_subject %>
-  </nav>
-  <section class="second-line">
-    <%= object.description %>
-  </section>
+      <%= t 'like.n', count: object.like_count %>
+    </span>
+  <%= link_to(object.object) do %>
+    <strong class="name"><%= object.object.title %></strong>
+    <p>
+      <%= object.description %>
+    </p>
+  <% end %>
 </li>
-

@@ -2,17 +2,14 @@
   <h4>
     <%= t 'explore.explore.most_popular' %>
   </h4>
-
   <%= render partial: 'explore/trending',
              collection: ActivityObject.trending.first(6),
              as: :object %>
 </ul>
-
 <ul class="list-group most-followed">
   <h4>
     <%= t 'explore.explore.most_followed' %>
   </h4>
-
   <%= render partial: 'explore/followed',
              collection: Actor.followed.first(6),
              as: :actor %>

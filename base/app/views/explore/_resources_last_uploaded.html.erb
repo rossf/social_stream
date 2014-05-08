@@ -1,9 +1,8 @@
 <li class="list-group-item">
-  <nav class="first-line-large">
-    <%= link_to object.object.title, object.object %>
-  </nav>
-  <section class="second-line">
-    <%= t 'explore.resources.uploaded_since', time: l(object.created_at) %>
-  </section>
+  <%= link_to(object.object) do %>
+    <header><strong><%= object.object.title %></strong></header>
+    <p>
+      <%= t 'explore.resources.uploaded_since', time: l(object.created_at) %>
+    </p>
+  <% end %>
 </li>
-
