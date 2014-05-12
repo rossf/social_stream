@@ -402,6 +402,7 @@ en:
     reply: Reply
     send: Send message
     sent: Your message was sent
+    send_simple: Send
   menu:
     options: Menu Options
     information: Information

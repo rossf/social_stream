@@ -2,41 +2,30 @@
   <div class="user">
     <%= render partial: 'toolbar/logo',
                locals: { subject: subject } %>
-
   </div>
 
-  <nav class="toolbar_menu">
-      </li>
-
-      <% if SocialStream.repository_models.present? %>
-        <li class="list-group-item">
-          <%= link_to [ subject, :repository ] do %>
-            <i class='fa fa-folder'></i> <%= t 'repository.title' %>
-          <% end %>
-        </li>
+  <nav class="toolbar_menu"> 
+    <% if SocialStream.repository_models.present? %>  
+      <%= link_to [ subject, :repository ], :class =>"list-group-item" do %>
+        <i class='fa fa-folder'></i> <%= t 'repository.title' %>
       <% end %>
+    <% end %>
 
-      <% if subject != current_subject %>
-        <li class="list-group-item">
-          <%= link_to new_message_path(receiver: subject.slug) do %>
-            <i class='fa fa-envelope-o'></i> <%= t 'mailboxer.send_simple' %>
-          <% end %>
-        </li>
+    <% if subject != current_subject %>
+      <%= link_to new_message_path(receiver: subject.slug), :class=>"list-group-item" do %>
+        <i class='fa fa-envelope-o'></i> <%= t 'mailboxer.send_simple' %>
       <% end %>
+    <% end %>
 
-      <li class="list-group-item">
-        <%= link_to [ subject, :profile ] do  %>
-          <i class='fa fa-info'></i> <%= t 'menu.information' %>
-        <% end %>
-      </li>
-    </ul>
-
+    <%= link_to [ subject, :profile ], :class =>"list-group-item" do  %>
+      <i class='fa fa-info'></i> <%= t 'menu.information' %>
+    <% end %>    
+    
     <% if current_subject.present? && subject != current_subject %>
       <div class="contact-button">
         <%= contact_button subject %>
       </div>
     <% end %>
-      
   </nav>
 
   <%= render partial: 'toolbar/contacts', locals: { subject: subject } %>
