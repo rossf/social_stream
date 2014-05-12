@@ -1,5 +1,5 @@
 <section class="toolbar-conversations">
-  <nav class="toolbar_menu tabbable">
+  <nav class="toolbar_menu">
     <ul class="nav nav-tabs">
 
       <li class='<%= 'active' if controller.action_name == 'new' %>'>
@@ -13,7 +13,7 @@
 
       <li class='<%= 'active' if params[:box] == 'inbox' %>'>
         <%= link_to conversations_path(box: :inbox) do %>
-          <i class='fa fa-sign-in'></i> 
+          <i class='fa fa-inbox'></i> 
           <div class="caption">
             <%= t('message.inbox') %> (<%= current_subject.unread_messages_count %>)
           </div>

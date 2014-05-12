@@ -6,7 +6,7 @@
         :method => :put, class: 'mark_as_read') %>
   </div>
 
-  <div class="list"> 
+  <div class="list-group"> 
     <% @notifications.each do |notification|%>
       <% @notification = notification %>
       <% read_class = notification.is_unread?(@actor) ? 'unread' : '' %>

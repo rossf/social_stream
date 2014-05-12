@@ -1,13 +1,14 @@
-<section id="login">
+<div id="login">
   <section class="change">
     <header>
       <h3>
         <%= t('devise.passwords.update') %>
       </h3>
-
-      <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :put }) do |f| %>
-      <%= devise_error_messages! %>
-      <%= f.hidden_field :reset_password_token %>
+        <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :put }) do |f| %>
+  
+        <%= devise_error_messages! %>
+        <%= f.hidden_field :reset_password_token %>
+      
     </header>
 
     <div class="password">
@@ -23,5 +24,4 @@
     </div>
     <% end %>
   </section>
-</section>  
-
+</div>  

@@ -403,6 +403,7 @@ es:
     reply: Contestar
     send: Enviar mensaje
     sent: Tu mensaje fue enviado
+    send_simple: Enviar
   menu:
     information: Información
     options: Opciones

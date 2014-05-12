@@ -14,11 +14,15 @@
       </a>
       <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu">
         <%= form_for User.new, :as => :user, :url => user_session_path do |f| %>
-          <%= f.email_field :email, :id => "username" %>
-          <%= f.password_field :password, :id => "password"  %>
-          <label class="checkbox">
-            <input type="checkbox"> <%=t("activerecord.attributes.user.remember_me")%>
-          </label>
+          <div class="form-group">
+            <%= f.email_field :email, :id => "username" %>
+            <%= f.password_field :password, :id => "password"  %>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox"> <%=t("activerecord.attributes.user.remember_me")%>
+            </label>
+          </div>
           <%= f.submit t(:sign_in), :class => ' btn btn-primary'%>
           <hr class="soften">
           <%= link_to t('devise.links.forgot_password'), new_password_path(:user) %>

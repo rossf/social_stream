@@ -27,19 +27,19 @@
 
 @mixin dropdown-log
   padding: $padding-base-vertical $padding-base-horizontal
-  #username,
-  #password
-    margin-bottom: 10px
-  label.checkbox
-    display: inline
-    padding-left: 0
-    input
+  input
+    &[type="email"],
+    &[type="password"]
       float: none
-      margin: 0
+      margin: 0 0 10px
+  .checkbox
+    float: left
+    margin-top: 0
+    margin-bottom: 21px
   input
     &[type="submit"]
       float: right
-  .soften
+  hr
     margin: 20px 0px 7px
     clear: both
   .options
@@ -88,9 +88,11 @@
       float: right
       display: inline-block
       margin-bottom: 10px
-  .soften
+  
+  hr
     margin: 20px 0px 7px
     clear: both
+
   .options
     @include options-auth
 
@@ -212,47 +214,6 @@
       background-image: url(nota.png)
       @include rotate(-3deg)
 
-@mixin header-tabbable
-  clear: both
-  margin-top: 10px
-  .tab-content
-    overflow: visible
-  ul.nav,
-  ul.nav-tabs 
-    li   
-      &:hover,
-      &:focus
-        background-color: none !important
-        border: none
-        border-bottom: 3px solid $link-color     
-      a             
-        border-left: none
-        border-right: none
-        border-top: none
-        padding: 6px 10px 6px 10px
-        margin-top: 5px
-      i
-        display: inline
-        i.active
-          padding-right: 3px
-        &:hover
-          margin-top: -3px
-      .caption
-        display: inline-block
-        @include hidden-xs
-        @include hidden-sm
-
-    li.active
-      background-color: none !important
-      border: none
-      border-bottom: 3px solid $brand-primary
-      a
-        border-left: none
-        border-right: none
-        border-top: none
-        margin-top: 5px
-        padding: 6px 10px 6px 10px
-
 
 @mixin delete-color
   &:hover
@@ -261,15 +222,14 @@
       color: $brand-danger
 
 
-
 @mixin form
   padding: 15px
   label
-    display: block
     @extend .caption
+    display: block
     margin-top: 15px
     &:first-child
-      margin-top: 0
+      margin-top: 0 !important
   input
     &[type="text"],
     &[type="email"], 

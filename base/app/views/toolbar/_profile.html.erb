@@ -19,21 +19,24 @@
       <% if subject != current_subject %>
         <li class="list-group-item">
           <%= link_to new_message_path(receiver: subject.slug) do %>
-            <i class='fa fa-envelope-o'></i> <%= t 'mailboxer.send' %>
+            <i class='fa fa-envelope-o'></i> <%= t 'mailboxer.send_simple' %>
           <% end %>
         </li>
       <% end %>
+
+      <li class="list-group-item">
+        <%= link_to [ subject, :profile ] do  %>
+          <i class='fa fa-info'></i> <%= t 'menu.information' %>
+        <% end %>
+      </li>
     </ul>
+
     <% if current_subject.present? && subject != current_subject %>
       <div class="contact-button">
         <%= contact_button subject %>
       </div>
     <% end %>
-    <ul class="list-group">
-      <li class="list-group-item">
-        <%= link_to [ subject, :profile ] do  %>
-          <i class='fa fa-info'></i> <%= t 'menu.information' %>
-        <% end %>
+      
   </nav>
 
   <%= render partial: 'toolbar/contacts', locals: { subject: subject } %>

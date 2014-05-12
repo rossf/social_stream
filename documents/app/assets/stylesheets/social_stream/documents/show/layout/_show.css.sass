@@ -6,13 +6,12 @@
     @include make-lg-column(12, $gutter: $grid-gutter-width)
 
 #document
-  .tabbable
-    ul
-      margin-bottom: 0 !important
-      li
-        &:last-child
-          float: right
-          @include delete-color
+  .nav-tabs
+    margin-bottom: 0 !important
+    li
+      &:last-child
+        float: right
+        @include delete-color
   .tab-content
     background-color: $white
     .tab-pane
@@ -21,7 +20,7 @@
         vertical-align: bottom
       .counters
         float: right
-        margin-top: 34px
+        margin-top: 4px
         span
           display: inline-block
           span

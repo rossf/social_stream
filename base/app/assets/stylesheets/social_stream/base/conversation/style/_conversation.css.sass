@@ -29,11 +29,12 @@
     .date
       color: $gray
   .action
-    a:link
-      color: $gray
-    a:hover
-      color: $brand-danger
-      text-decoration: none
+    a
+      &:link
+        color: $gray
+      &:hover
+        color: $brand-danger
+        text-decoration: none
 
 
   
@@ -43,6 +44,7 @@
 
 .unread
   background-color: $white
+  @include transition (background-color 1sec)
 
 .conversation_full
   h3
@@ -79,6 +81,12 @@
       .date
         color: #999
 
+#conversation
+  input
+    &[type="submit"]
+      &:hover
+        background-color: $brand-primary
+        color: $white
 
 
 #content
