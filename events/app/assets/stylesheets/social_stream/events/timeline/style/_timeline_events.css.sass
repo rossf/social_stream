@@ -1,36 +1,22 @@
-.timeline
-  .media
-    .media-body
-      .event
-        .date
-          background-color: $white
-          text-align: center
-          .day,
-          .month
-            font-weight: bold
-            font-size: 22px
-          .day
-            display: inline
-          .month
-            display: inline-block
-          .hour
-            font-size: 15px
+.media-body
+  .event
+    .details
+      .frequency
+        color: #c3c3c3
+        font-size: 13px
+      .date
+        .day,
+        .month
+          font-weight: bold
+          font-size: 22px
+        .hour
+          font-size: 15px
 
-        .details
-          .frequency
-            color: #c3c3c3
-            font-size: 13px
-          .description
-            font-size: 12px
-
-          .follow
-            font-size: 12px
-
-          input
-            &[type="submit"]
-              @include border-radius
-              border: 1px solid $gray-dark
-              color: $gray-dark
+      input
+        &[type="submit"]
+          @include border-radius
+          border: 1px solid $gray-dark
+          color: $gray-dark
 .modal
   .modal-body
     .event

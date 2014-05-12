@@ -1,6 +1,16 @@
 <%= div_for event do %>
-
-  <%= render :partial => "events/date", :locals => { :event => event } %>
+  <header>
+    <h5>
+      <%= link_to event.title, event %>
+    </h5>
+    <div class="btn-group follow">    
+      <%= render :partial => 'activity_actions/follow_sentence',
+               :locals  => { :activity_object => event.activity_object } %>
+     
+      <%= render :partial => 'activity_actions/follow_form',
+               :locals => { :activity_object => event.activity_object } %>
+    </div>
+  </header>
 
   <%= render :partial => "events/poster", :locals => { :event => event } %>
 
