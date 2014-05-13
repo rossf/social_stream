@@ -1,0 +1,9 @@
+<!-- insert_before ".notifications-menu" -->
+
+<li class="event">
+  <%= link_to events_path do %>
+    <i class="fa fa-calendar <%= current_header_icon_class(:events) %>" title="<%= t ('header.icon.calendar') %>">
+      <%= t ('header.icon.calendar') %>
+    </i> 
+  <% end %>
+</li>

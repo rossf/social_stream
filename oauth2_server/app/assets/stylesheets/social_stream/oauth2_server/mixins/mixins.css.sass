@@ -5,3 +5,27 @@
   border-color: rgba(0,0,0, 0.1)
   background-color: $auxiliarColor
   border-color: rgba(0,0,0, 0.1)
+
+@mixin edit-btn
+  &:hover
+    .edit
+      @include opacity(1)
+      margin-left: 5px
+  .edit
+    @include opacity(0)
+
+
+@mixin applications-list
+  min-height: 67px
+  .logo-app,
+  .data
+    float: left
+  .btn-group
+    float: right
+    margin-top: 6px
+
+@mixin lead
+  .lead
+    margin-bottom: 10px
+  .btn
+    float: right

@@ -11,7 +11,7 @@
         <% end %>
     </header>
 
-    <div class="content well">
+    <div class="content">
       <%= image_tag(resource.logo.url(:medium), class: "logo-app pull-right") %>
       <div class="gereral-info">      
         <h4>
@@ -74,44 +74,33 @@
                   </div>
                 </div>
               </div>
-               
             </div>
           </div>
         </div>
-
       <% end %>
     </div>
-  </section>
+    <div class="user-zone">
+      <h5 class="lead">Authorized
+      </h5>
 
-  <div class="tabbable"> <!-- Only required for left/right tabs -->
-    <ul class="nav nav-tabs">
-      <li class="active"><a href="#authorized" data-toggle="tab">Authorized</a></li>
-    </ul>
-    
-  <!--
-    <div class="btn-group" data-toggle="buttons">
-      <button type="radio" name="options" id="option1">user</button>
-      <button type="radio" name="options" id="option2"">organization</button>
-    </div>
+      <%= text_field_tag "contact-filter", "", placeholder: "filter", autocomplete: "off" %>
+      
+      <%= render partial: 'contacts/add_button',
+                     locals: {
+                       sender: resource,
+                       type: [ :user, :group ]
+                     }
+          %>
+      
+      <div class="tab-content">
+        <div class="tab-pane active" id="authorized">
 
-     <%= text_field_tag "contact-filter", "", placeholder: "filter", autocomplete: "off" %>
-    -->
-
-    <div class="tab-content">
-      <div class="tab-pane active" id="authorized">
-
-        <%= render partial: 'contacts/add_button',
-                   locals: {
-                     sender: resource,
-                     type: [ :user, :group ]
-                   }
-        %>
-
-        <%= render partial: 'contacts/contact',
-                   collection: resource.sent_contacts.first(12) %>
+          <%= render partial: 'contacts/contact',
+                     collection: resource.sent_contacts.first(12) %>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 
   <%= javascript_tag do %>
     SocialStream.SiteClient.show();

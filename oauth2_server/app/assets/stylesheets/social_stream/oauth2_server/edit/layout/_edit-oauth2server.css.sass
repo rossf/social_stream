@@ -1,0 +1,76 @@
+
+#edit_site_client,
+#new_site_client-modal
+  padding-top: 9px
+  .edit_site_client,
+  .modal-body
+    form
+      padding-left: 18px
+
+  .edit_site_client
+    width: 100%
+    margin: $zero $zero 20px $zero
+    .logo
+      clear: both
+      min-height: 179px
+
+
+section.delete
+  &:hover
+    border-color: $brand-danger !important
+    a
+      color: $brand-danger !important
+  header
+    margin-bottom: $zero
+  #destroy_site_client-content,
+  #destroy_organization-content
+    padding-left: 15px
+    a
+      color: $brand-danger !important
+
+.edit_form,
+.create_logo_app
+  @include form
+.edit_form
+  margin-bottom: 20px
+
+.edit_site_client
+  width: 100%
+  margin: $zero $zero 20px $zero
+  .logo
+    @include form
+    clear: both
+
+.new_app,
+.edit_form,
+.create_logo_app
+  input
+    &[type="submit"]
+      float: right
+
+#avatar-progress
+  width: 90%
+
+#edit_site_client 
+  section.edit_site_client 
+    @include make-sm-column(12, $gutter: $grid-gutter-width)
+    @include make-sm-column(9, $gutter: $grid-gutter-width)
+    @include make-md-column(10, $gutter: $grid-gutter-width)
+    @include make-lg-column(10, $gutter: $grid-gutter-width)
+    textarea
+      min-height: 20px
+      max-height: 19px
+      float: none
+
+  input
+    &[type="submit"]
+      margin: $zero
+
+.jcrop-holder
+  margin: 20px auto $zero
+
+.avatar-current
+  width: 115px
+  margin: 9px $zero $zero 20px
+  img 
+    border: $border-radius-base

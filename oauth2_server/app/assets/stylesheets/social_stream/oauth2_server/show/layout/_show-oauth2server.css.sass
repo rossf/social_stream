@@ -30,27 +30,26 @@
 
 
 #site_client 
-  width: 75%
-  margin-left: 2.85%
   .site_client
-    width: 95% 
-    padding: 0 2.5%
-    margin-bottom: 30px
-    display: inline-block
+    @include edit-btn
     header
       margin-top: -37px
       h4
         @include clearfix
-        margin-bottom: 4px
-        margin-left: -2.5%
-        a
-          font-size: 13px
-    .soften
+        margin: 4px
+      .edit
+        padding-top: 6px
+      h4,
+      .edit
+        float: left
+    hr
       margin-bottom: 0px
     .content
       padding: 14px
+      clear: both
       img
         display: inline
+        margin-top: -34px
         @include size (40px, 40px)
       .gereral-info
         h4
@@ -73,27 +72,14 @@
           border-top: 1px solid #C1C1C1
           color: #929292
           font-size: 17px
-      .btn-group
-        @include border-radius
-        @include btn-add
-        float: right
-        .dropdown-menu
-          width: 300px
-          margin-left: -196px
-          padding: 10px 14px
-          color: $gray
-          li
-            h6
-              border-bottom: 1px solid #CCC
-              a
-                color: $brand-primary !important
+      
           li.client-secret
             p
               word-break: break-all
               overflow-x: scroll
 
-
-     
-  .users
-    float: right
-    margin-top: 7px
+  .user-zone
+    #add-contact-link
+      float: right
+    .contact
+      @include box-layout

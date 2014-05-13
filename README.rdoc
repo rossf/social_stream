@@ -10,5 +10,5 @@ It provides a robust and flexible framework with {social networking}[http://en.w
 
 - The iconic font designed for Bootstrap {Font awesome}[http://fontawesome.io/]
 
-- New visual style, folders organization, svg optimization, best Sass use (new call files, typography, optimization code lines..). Working on it! (only frontpage and devise stable.. at the momment dont use responsive files!!)
+- New visual style, folders organization, svg optimization, best Sass use (new call files, typography, optimization code lines..). Working on it! (80% stable.. less is more!)
 

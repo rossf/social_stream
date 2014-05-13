@@ -10,11 +10,10 @@
       <%= link_to t('site.client.new.link'), polymorphic_path(resource_class.new, action: 'new'), class: "btn btn-primary new_site_client-modal-link", 'data-toggle' => 'modal'  %>
         
     </header>
-    <div class="tabbable"> <!-- Only required for left/right tabs -->
-      <ul class="nav nav-tabs">
-        <li class="active"><a href="#tab1" data-toggle="tab"><%= t 'site.client.managing' %></a></li>
-      </ul>  
-    </div>
+
+    <ul class="nav nav-tabs">
+      <li class="active"><a href="#tab1" data-toggle="tab"><%= t 'site.client.managing' %></a></li>
+    </ul>  
 
     <div class="tab-content">
       <div class="tab-pane active" id="tab1">

@@ -1,7 +1,7 @@
 <ul class="list-group">
   <% list.each do |client| %>
     <li class="list-group-item">
-      <%= link_to client do %>
+      <%= link_to client, :class => "logo-app" do %>
         <%= image_tag client.logo.url(:small) %>
       <% end %>
 
@@ -13,15 +13,16 @@
           <%= link_to client.url, client.url, target: '_blank' %>
         </div>
       </div>
-      <!--
-        <span class="badge">
+      <div class="btn-group">
+        <button class="btn btn-default disabled">
           5 users
-        </span>
+        </button>
           
-          <span class="badge">
+          <button class="btn btn-default disabled">
             15 authorized
-          </span>
-      -->
+          </button>
+      </div>
+     
     </li>
   <% end %>
 

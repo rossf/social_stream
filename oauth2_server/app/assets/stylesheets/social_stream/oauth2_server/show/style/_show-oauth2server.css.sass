@@ -11,8 +11,8 @@
   h1
     text-align: left
   .site_client
-    @include principal-box   
     .content
+      @include principal-box 
       a
         img
           background-color: #f9f9f9
@@ -28,15 +28,38 @@
           color: $gray
           &:hover
             color: $brand-primary
-      .result
-        font-size: 15px
-
-      .client_secret
-        border: 1px solid ccc
-        overflow-y: hidden
-        overflow-x: scroll
-
-      .users
-        font-size: 16px
-        span
-          color: $brand-primary
+    
+    .panel-body
+      div.client-secret,
+      div.client-id
+        header
+          margin-top: $zero
+          border-bottom: 1px solid $gray-light
+          min-height: 23px
+        form
+          margin-top: -13px
+          input
+            &[type="submit"]
+              margin-top: -15px
+              border: none
+              box-shadow: none
+              &:hover
+                background-color: $white !important
+                color: $brand-primary
+        .result
+          margin-top: 4px
+          p
+            padding-left: 10px
+      div.client-id
+        h6
+          margin-top: $zero
+      div.client-secret 
+        word-wrap: break-word
+        min-height: 22px
+        width: 100%
+        input
+          &[type="submit"]
+            padding-right: $zero
+    .user-zone
+      .contact
+        @include box-style

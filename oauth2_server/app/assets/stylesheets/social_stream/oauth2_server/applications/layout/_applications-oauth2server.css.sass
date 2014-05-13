@@ -1,46 +1,48 @@
-#site_clients
-  .site_clients
-    float: left
-    margin-left: 2.5%
-    header
-      a
-        float: right
-      .button_to
-        float: right
-      .soften
-        margin: 9px 0 10px 0
-        clear: both
-    img
-      display: inline
-      @include size (40px, 40px)
-      float: left
+.site_clients,
+.site_client
+  @include make-sm-column(12, $gutter: $grid-gutter-width)
+  @include make-sm-column(9, $gutter: $grid-gutter-width)
+  @include make-md-column(10, $gutter: $grid-gutter-width)
+  @include make-lg-column(10, $gutter: $grid-gutter-width)
 
-    .name,
-    .url,
-    .users
-      display: inline-block
-
-    .name,
-    .url
-      margin-left: 20px
-
-    .users
+.site_clients
+  header
+    a
       float: right
-      margin-top: -8px
-      text-align: right
+    .button_to
+      float: right
+    .soften
+      margin: 9px 0 10px 0
+      clear: both
+  img
+    display: inline
+    @include size (40px, 40px)
+    float: left
+  .name,
+  .url,
+  .users
+    display: inline-block
 
+  .name,
+  .url
+    margin-left: 20px
+  @include lead
+  .list-group-item
+    @include applications-list
 
-  #new_site_client-modal
-    .modal-body
-      max-height: 520px  
-      padding: 0 15px 15px 15px
-      form.new_site_client
+  
+
+#new_site_client-modal
+  .modal-body
+    max-height: 520px  
+    padding: 0 15px 15px 15px
+    form.new_site_client
+      margin-left: 0px
+      width: 100%
+      .name,
+      .url
         margin-left: 0px
         width: 100%
-        .name,
-        .url
-          margin-left: 0px
-          width: 100%
-      input
-        &[type="file"]
-          line-height: 0px
+    input
+      &[type="file"]
+        line-height: 0px
