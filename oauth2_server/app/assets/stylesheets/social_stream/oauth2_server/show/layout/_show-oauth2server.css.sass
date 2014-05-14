@@ -33,7 +33,6 @@
   .site_client
     @include edit-btn
     header
-      margin-top: -37px
       h4
         @include clearfix
         margin: 4px
@@ -72,6 +71,9 @@
           border-top: 1px solid #C1C1C1
           color: #929292
           font-size: 17px
+          a,
+          p
+            @include text-overflow
       
           li.client-secret
             p

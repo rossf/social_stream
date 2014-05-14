@@ -1,45 +1,41 @@
+#edit_site_client 
+  section.edit_site_client 
+    @include make-sm-column(12, $gutter: $grid-gutter-width)
+    @include make-sm-column(9, $gutter: $grid-gutter-width)
+    @include make-md-column(10, $gutter: $grid-gutter-width)
+    @include make-lg-column(10, $gutter: $grid-gutter-width)
 
-#edit_site_client,
-#new_site_client-modal
-  padding-top: 9px
-  .edit_site_client,
-  .modal-body
-    form
-      padding-left: 18px
-
-  .edit_site_client
-    width: 100%
-    margin: $zero $zero 20px $zero
+    .edit_form,
+    .site_client_roles,
+    .logo,
+      background-color: $white
+      margin-bottom: 6px
+    .site_client_roles
+      @include make-row
+      margin-left: 0px
+      margin-right: 0px
+      @include privacity
+      .radio
+        input
+          &[type="tetx"]
+            width: 200px
     .logo
       clear: both
       min-height: 179px
-
-
-section.delete
-  &:hover
-    border-color: $brand-danger !important
-    a
-      color: $brand-danger !important
-  header
-    margin-bottom: $zero
-  #destroy_site_client-content,
-  #destroy_organization-content
-    padding-left: 15px
-    a
-      color: $brand-danger !important
+      .avatar-update
+        padding: 9px 0 0 20px
 
 .edit_form,
 .create_logo_app
   @include form
-.edit_form
-  margin-bottom: 20px
+  padding-bottom: 45px
 
-.edit_site_client
-  width: 100%
-  margin: $zero $zero 20px $zero
-  .logo
-    @include form
-    clear: both
+
+.edit_form
+  .name
+    margin-top: -10px
+
+
 
 .new_app,
 .edit_form,
@@ -48,29 +44,27 @@ section.delete
     &[type="submit"]
       float: right
 
-#avatar-progress
-  width: 90%
-
-#edit_site_client 
-  section.edit_site_client 
-    @include make-sm-column(12, $gutter: $grid-gutter-width)
-    @include make-sm-column(9, $gutter: $grid-gutter-width)
-    @include make-md-column(10, $gutter: $grid-gutter-width)
-    @include make-lg-column(10, $gutter: $grid-gutter-width)
-    textarea
-      min-height: 20px
-      max-height: 19px
-      float: none
-
-  input
-    &[type="submit"]
-      margin: $zero
-
-.jcrop-holder
-  margin: 20px auto $zero
-
 .avatar-current
   width: 115px
   margin: 9px $zero $zero 20px
   img 
     border: $border-radius-base
+
+#avatar-progress
+  width: 90%
+
+.jcrop-holder
+  margin: 20px auto $zero 
+
+.edit_actor
+  input
+    &[type="submit"]
+      @extend .btn-primary
+      float: right
+      margin-right: 15px 
+
+
+section.delete
+  @include delete
+  .panel-heading
+    background-color: #FFF

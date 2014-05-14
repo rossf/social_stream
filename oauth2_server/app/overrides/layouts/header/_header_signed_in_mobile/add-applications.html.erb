@@ -18,7 +18,7 @@
   </li>
 
 <!--contacts-->
-  <li class="">
+  <li class="tooltip-header" data-original-title="fds">
     <%= link_to contacts_path do %>
       <i class='tooltip-header fa fa-group <%= current_header_icon_class(:contacts) %>' data-original-title="fds" title="<%= t 'header.icon.contacts' %>"></i>
       <%= t 'header.icon.contacts' %>
@@ -28,11 +28,12 @@
 
 <!--notifications-->
   <li class="notifications-menu">
-    <%= link_to notifications_path do %>
+    <%= link_to notifications_path, id: 'btn_menu_settings' do %>
       <i class='fa fa-bell-o' title="<%= t 'dropdown.notifications' %>"></i>
       <%= t 'dropdown.notifications' %>
     <% end %>
   </li>
+  
 
 <!--privacy-->  
   <li class="privacy-menu">

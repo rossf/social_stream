@@ -2,7 +2,7 @@
 <li class="applications-menu">
   <%= link_to site_clients_path do %>
     <i class='fa fa-laptop title="<%= t('account.applications') %>">
-      <%= t('account.applications') %>
     </i>
+    <%= t('account.applications') %>
   <% end %>
 </li>  

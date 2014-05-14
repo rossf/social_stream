@@ -6,18 +6,22 @@
   <div id="calendar" class="table-striped" data-events_path="<%= polymorphic_path [profile_or_current_subject, Event.new] %>" data-date="<%= params[:date] %>" data-view="<%= params[:view] %>" <%= 'data-can-create="true"' if can?(:create, new_post(profile_or_current_subject)) %>></div>
 
   <% if can? :create, new_post(profile_or_current_subject) %>
-    <div id="calendar_form" class="modal hide fade">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+   
+    <div class="modal fade" id="calendar_form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
           &times;
         </button>
-        <h3>
-          <%= t('event.new.title') %>
-        </h3>
-      </div>
-
-      <div class="modal-body">
-        <%= render partial: 'new' %>
+            <h4 class="modal-title" id="myModalLabel">
+            <%= t('event.new.title') %>
+            </h4>
+          </div>
+          <div class="modal-body">
+            <%= render partial: 'new' %>
+          </div>
+        </div>
       </div>
     </div>
   <% end %>

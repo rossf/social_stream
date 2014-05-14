@@ -20,12 +20,31 @@
   .logo-app,
   .data
     float: left
-  .btn-group
+    display: block
+  .btn-group-vertical
     float: right
-    margin-top: 6px
+    width: 108px
+    @include hidden-xs
+  .name,
+  .url
+    display: block
 
 @mixin lead
   .lead
     margin-bottom: 10px
   .btn
     float: right
+
+
+@mixin delete
+  &:hover
+    border-color: $brand-danger !important
+    a
+      color: $brand-danger !important
+  header
+    margin-bottom: $zero
+  #destroy_site_client-content,
+  #destroy_organization-content
+    padding-left: 15px
+    a
+      color: $brand-danger !important

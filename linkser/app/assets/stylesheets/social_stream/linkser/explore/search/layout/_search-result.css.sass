@@ -1,10 +1,11 @@
-#search-result
+#search-results
   .link
-    display: inline-block
     .thumbnail
-      display: inline
-    .info
-      display: inline-block
-      title
-        margin-bottom: 2px
-      .description
+      display: block
+    .brifing
+      .url
+        @include text-overflow
+        width: 100%
+        a
+          color: $gray-dark
+          font-size: 13px

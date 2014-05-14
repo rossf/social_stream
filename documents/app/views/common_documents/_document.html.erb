@@ -3,9 +3,9 @@
     <%= link_to icon(document, 50), document, :title => document.file_file_name %>
   </div>
   <div class="brifing">
-    <h5>
+    <div class="name">
       <%= link_to truncate(document.title, :length => 15), document %>
-    </h5>
+    </div>
 
     <div class="author">
       <%= raw t('document.by', author: link_to(document.author.name, document.author_subject)) %>

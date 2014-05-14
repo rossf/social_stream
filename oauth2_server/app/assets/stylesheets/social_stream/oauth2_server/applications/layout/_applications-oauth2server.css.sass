@@ -4,6 +4,8 @@
   @include make-sm-column(9, $gutter: $grid-gutter-width)
   @include make-md-column(10, $gutter: $grid-gutter-width)
   @include make-lg-column(10, $gutter: $grid-gutter-width)
+  @media (max-width: $screen-xs-max)
+    clear: both
 
 .site_clients
   header
@@ -29,6 +31,7 @@
   @include lead
   .list-group-item
     @include applications-list
+
 
   
 

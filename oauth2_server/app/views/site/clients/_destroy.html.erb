@@ -1,11 +1,15 @@
-<div id="destroy_site_client" class="accordion-group">
-  <header class="accordion-heading">
-    <h5>
-      <%= link_to t("site.client.destroy.title"), "javascript:void(0);", class: 'accordion-toggle', "data-toggle" => 'collapse', "data-parent" => "#site_client-accordion", "data-target" => "#destroy_site_client-content" %>
-    </h5>
-  </header>
-  
-  <div class="content collapse" id="destroy_site_client-content">
-    <%= link_to t("site.client.destroy.link"), resource, confirm: t("site.client.destroy.confirm"), method: :delete %>
+<div class="panel-group" id="destroy_site_client">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <%= link_to t("site.client.destroy.title"), "javascript:void(0);", "data-toggle" => 'collapse', "data-parent" => "#site_client-accordion", "data-target" => "#destroy_site_client-content" %>
+      </h4>
+    </div>
+    <div id="destroy_site_client-content" class="panel-collapse collapse">
+      <div class="panel-body">
+     
+          <%= link_to t("site.client.destroy.link"), resource, confirm: t("site.client.destroy.confirm"), method: :delete %>
+      </div>
+    </div>
   </div>
 </div>
