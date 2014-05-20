@@ -1,5 +1,5 @@
 textarea, input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"] {   
-  background-color: #F0F0F0;
+  background-color: #F5F5F5;
   border: none;
   color: $gray;
   padding: 7px $padding-base-horizontal 5px;
@@ -7,7 +7,7 @@ textarea, input[type="text"], input[type="password"], input[type="email"], input
 }
 
 textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus {   
-  background-color: #F0F0F0;
+  background-color: #F5F5F5;
   border: none;
   color: $gray;
   padding: 7px $padding-base-horizontal 5px;

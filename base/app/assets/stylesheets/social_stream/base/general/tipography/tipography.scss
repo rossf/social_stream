@@ -116,59 +116,24 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Heading level 1.*/
 h1, .alpha {
-  line-height: 3rem;
-  @include fontsize-0(28);
-  @include breakpoint(break-1) {
-    @include fontsize-1(30);
-  }
-  @include breakpoint(break-2) {
-    @include fontsize-2(32);
-  }
-  @include breakpoint(break-3) {
-    @include fontsize-3(36);
-  }
-  @include breakpoint(break-4) {
-    @include fontsize-4(40);
-  }
-}
-
-/* Heading level 2.*/
-h2, .beta {
   @include fontsize-0(22);
   @include breakpoint(break-1) {
-    @include fontsize-1(24);
+    @include fontsize-1(22);
   }
   @include breakpoint(break-2) {
     @include fontsize-2(26);
   }
   @include breakpoint(break-3) {
-    @include fontsize-3(30);
+    @include fontsize-3(34);
   }
   @include breakpoint(break-4) {
-    @include fontsize-4(34);
+    @include fontsize-4(36);
   }
 }
 
-/* Heading level 3.*/
-h3, .gamma {
+/* Heading level 2.*/
+h2, .beta {
   @include fontsize-0(20);
-  @include breakpoint(break-1) {
-    @include fontsize-1(22);
-  }
-  @include breakpoint(break-2) {
-    @include fontsize-2(24);
-  }
-  @include breakpoint(break-3) {
-    @include fontsize-3(28);
-  }
-  @include breakpoint(break-4) {
-    @include fontsize-4(30);
-  }
-}
-
-/* Heading level 4.*/
-h4, .delta {
-  @include fontsize-0(18);
   @include breakpoint(break-1) {
     @include fontsize-1(20);
   }
@@ -176,27 +141,61 @@ h4, .delta {
     @include fontsize-2(22);
   }
   @include breakpoint(break-3) {
-    @include fontsize-3(26);
+    @include fontsize-3(24);
   }
   @include breakpoint(break-4) {
-    @include fontsize-4(28);
+    @include fontsize-4(26);
+  }
+}
+
+/* Heading level 3.*/
+h3, .gamma {
+  @include fontsize-0(18);
+  @include breakpoint(break-1) {
+    @include fontsize-1(18);
+  }
+  @include breakpoint(break-2) {
+    @include fontsize-2(20);
+  }
+  @include breakpoint(break-3) {
+    @include fontsize-3(22);
+  }
+  @include breakpoint(break-4) {
+    @include fontsize-4(24);
+  }
+}
+
+/* Heading level 4.*/
+h4, .delta {
+  @include fontsize-0(16);
+  @include breakpoint(break-1) {
+    @include fontsize-1(16);
+  }
+  @include breakpoint(break-2) {
+    @include fontsize-2(18);
+  }
+  @include breakpoint(break-3) {
+    @include fontsize-3(20);
+  }
+  @include breakpoint(break-4) {
+    @include fontsize-4(22);
   }
 }
 
 /* Heading level 5.*/
 h5, .epsilon {
-  @include fontsize-0(17);
+  @include fontsize-0(14);
   @include breakpoint(break-1) {
-    @include fontsize-1(19);
+    @include fontsize-1(14);
   }
   @include breakpoint(break-2) {
-    @include fontsize-2(21);
+    @include fontsize-2(16);
   }
   @include breakpoint(break-3) {
-    @include fontsize-3(24);
+    @include fontsize-3(18);
   }
   @include breakpoint(break-4) {
-    @include fontsize-4(26);
+    @include fontsize-4(20);
   }
 }
 

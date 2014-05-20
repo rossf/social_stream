@@ -850,16 +850,16 @@ $container-lg:                 $container-large-desktop !default;
 // Breakpoint sizes in ems. Note: not relative to root font-size.
 $break-0: 0;                          // Mobile first yo
 $break-1: (480 / 14) * 1em;           // 480px   -  Small tablet up
-$break-2: (768 / 14) * 1em;           // 768px   -  Large tablet up
-$break-3: (979 / 14) * 1em;          // 979px  -  Desktop up
+$break-2: (768 / 12) * 1em;           // 768px   -  Large tablet up
+$break-3: (979 / 11) * 1em;          // 979px  -  Desktop up
 $break-4: (1200 / 14) * 1em;          // 1200px  -  Large desktop up
 
 // Root font-sizes. Set to half desired line-height of body text.
-$rootsize-0: 9;                      // 24px line-height body text
-$rootsize-1: 11;                      // 28px line-height body text
-$rootsize-2: 12;                      // 30px line-height body text
+$rootsize-0: 11;                      // 24px line-height body text
+$rootsize-1: 12;                      // 28px line-height body text
+$rootsize-2: 13;                      // 30px line-height body text
 $rootsize-3: 14;                      // 34px line-height body text
-$rootsize-4: 15;                      // 36px line-height body text
+$rootsize-4: 16;                      // 36px line-height body text
 
 // Control the line-length with max-width values for the container. Aim for 45-75 characters a line if possible, at smaller sizes type size is more important.
 $maxwidth-0: #{500 / $rootsize-0}rem; // 500px wide
