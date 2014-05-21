@@ -25,6 +25,16 @@
     <% end %>
   </li>
 
+<!--repository-->
+  <% if SocialStream.repository_models.present? %>
+    <li class="repository-menu">
+      <%= link_to repository_path do %>
+        <i class='fa fa-file <%= current_header_icon_class(:resources) %>' title="<%= t 'header.icon.repository' %>" ></i>
+        <%= t 'header.icon.repository' %>
+      <% end %>
+    </li>
+  <% end %> 
+
 
 <!--notifications-->
   <li class="notifications-menu">

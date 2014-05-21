@@ -19,20 +19,20 @@ namespace :db do
 
       @SS_BASE_PATH = Gem::Specification.find_by_name('social_stream-base').full_gem_path
       @LOGOS_PATH = File.join(@SS_BASE_PATH, 'lib', 'logos')
-      @LOGOS_TOTAL = (ENV["LOGOS_TOTAL"] || 12).to_i
-      @USERS = (ENV["USERS"] || 9).to_i
-      @GROUPS = (ENV["GROUPS"] || 10).to_i
+      @LOGOS_TOTAL = (ENV["LOGOS_TOTAL"] || 1).to_i
+      @USERS = (ENV["USERS"] || 1).to_i
+      @GROUPS = (ENV["GROUPS"] || 1).to_i
       if ENV["HARDCORE"].present?
         @USERS = 999
         @GROUPS = 1000
         puts "Hardcore mode: ON (May the Force be with you brave Padawan)"
       end
-      if @USERS < 9
-        @USERS = 9
+      if @USERS < 1
+        @USERS = 1
         puts "WARNING: There should be at least 10 users (Demo user and 9 more). Changing USERS to 9."
       end
-      if @GROUPS < 10
-        @GROUPS = 10
+      if @GROUPS < 1
+        @GROUPS = 1
         puts "WARNING: There should be at least 10 groups. Changing GROUPS to 10."
       end
 

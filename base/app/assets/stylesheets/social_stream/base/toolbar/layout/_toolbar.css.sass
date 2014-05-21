@@ -7,7 +7,7 @@
     float: none
     width: 100%
     padding: 0
-    min-height: 150px
+    min-height: 215px
     margin-bottom: 10px
     h5
       float: left
@@ -21,8 +21,6 @@
         width: 100% !important
         .caret 
           margin-left: 14px
-  @media (min-width: $screen-md-min)
-    width: 145px
 
 
   .contacts-toolbar,
@@ -62,17 +60,17 @@
 
   #avatar_profile,
   .logo_home
-    @media (max-width: $screen-xs-min)
-      float: left
-      width: 150px
     @media (max-width: $screen-sm-min)
       float: left
       display: inline
       width: 200px
-      margin: 0 5%
+      margin: 0 5% 0 15px
       img
-        @media (max-width: $screen-sm-min)
-          width: 100%
+        @include size (200px, 200px)
+    @media (max-width: $screen-xs-min)
+      width: 150px
+      img
+        @include size (150px, 150px)
     .subject-name
       @include hidden-xs
     .subject-name-phone

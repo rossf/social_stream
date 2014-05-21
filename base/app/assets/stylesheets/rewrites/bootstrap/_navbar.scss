@@ -4,6 +4,7 @@
 .navbar .nav.pull-right {
   margin-right: 10px;
 }
+
 // Navbar search
 // -------------------------
 .navbar-search {
@@ -12,22 +13,27 @@
     @include border-top-radius(5px); // redeclare because of specificity of the type attribute
   }
 }
+
 .navbar-collapse {
   max-height: 100% !important;
 }
+
 .navbar{
-  min-height: 48px;
+  max-height: 48px;
 }
+
 .navbar-search {
   margin: 9px 0 0 0;
   float: left;
   position: relative;
   z-index: 8;
 }
+
 .navbar-form {
   padding: 0;
   margin-left: 0;
 }
+
 .navbar .nav {
   margin: 0;
 }
@@ -39,11 +45,19 @@
   margin-right: 0;
   margin-left: 0;
 }
-.navbar-toggle{
-  margin-top: 9px;
-  margin-bottom: 0;
+
+.container-fluid > .navbar-collapse {
+  height: 417px;
 }
 
+.navbar-collapse{
+  background-color: #FFF;
+}
+
+.navbar-toggle{
+  margin-top: 3px;
+  margin-bottom: 0;
+}
 
 input.search-query {
   padding: 1px 11px 0;
