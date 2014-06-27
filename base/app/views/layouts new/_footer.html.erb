@@ -1,0 +1,11 @@
+<footer class="container-fluid">
+  <p>
+    Copyright © 
+    <%= Date.today.year %> 
+    <%= link_to t('site.name'), 'http://social-stream.dit.upm.es/' %>.
+    <%= render partial: 'frontpage/sponsor' %>
+    <a href="http://www.w3.org" title="HTML5 Powered with Connectivity / Realtime, CSS3 / Styling, Device Access, Multimedia, Performance &amp; Integration, and Semantics" alt="HTML5 Powered with Connectivity / Realtime, CSS3 / Styling, Device Access, Multimedia, Performance &amp; Integration, and Semantics">
+	  <%= image_tag('html5.svg') %>
+	</a>
+  </p>
+</footer>

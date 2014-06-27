@@ -1,0 +1,63 @@
+<header class="navbar navbar-fixed-top" role="navigation">
+
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <i class="hidden-sm hidden-md hidden-lg fa fa-chevron-down"></i>
+      </button>
+      <%= render partial: 'layouts/header/logo_in' %>
+      <!-- FIXME: search javascript functionality in 'layouts/search' -->
+      <div class="explore-nav">
+        <%= link_to explore_path do %>     
+          <%= t('explore.or') %>
+        <% end %>
+      </div>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <%= render partial: 'layouts/header/header_search' %>
+
+
+      <ul class="nav navbar-nav navbar-right navbar-desktop">
+        <li> 
+          <%= render partial: 'layouts/header/header_dropdown_extras' %>
+        </li>
+
+        <li class="tooltip-header" data-original-title="fds">
+          <%= link_to contacts_path do %>
+            <i class='tooltip-header fa fa-group <%= current_header_icon_class(:contacts) %>' data-original-title="fds" title="<%= t 'header.icon.contacts' %>"></i>
+          <% end %>
+        </li>
+
+        <li class="messages">
+          <%= link_to conversations_path do %> 
+            <i class='fa fa-envelope <%= current_header_icon_class(:messages) %>' title="<%= t 'header.icon.messages' %>"></i>
+          <% end %>
+        </li>
+      
+        <% if SocialStream.repository_models.present? %>
+        <li>
+        <%= link_to repository_path do %>
+          <i class='fa fa-file <%= current_header_icon_class(:resources) %>' title="<%= t 'header.icon.repository' %>" ></i>
+        <% end %>
+        </li>
+        <% end %> 
+
+        <li>
+          <%= render partial: 'layouts/header/header_dropdown_menu' %>
+        </li>  
+      </ul>
+      <ul class="nav navbar-nav nav-mobile">
+        <%= render partial: 'layouts/header/header_signed_in_mobile' %>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+  <script type="text/javascript">
+    $(document).ready(function() {          
+      $('.tooltip-header').tooltip({ placement: 'bottom'});
+    });
+  </script>
+</header>
+

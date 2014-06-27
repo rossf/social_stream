@@ -1,0 +1,10 @@
+<section class="explanation">
+  <%= image_tag('brand.svg', class: "logo", :alt => t('site.name')) %>
+
+  <h3>
+    <%= t 'frontpage.main_title' %>
+  </h3>
+  <h4>
+    <%= t 'frontpage.stats', users: User.count, groups: Group.count %>
+  </h4>
+</section>

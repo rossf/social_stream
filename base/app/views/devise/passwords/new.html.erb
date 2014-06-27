@@ -16,14 +16,14 @@
       </h4>
     </header>
 
-    <section class="password">
+    <section class="password form-group">
       <%= f.label :email %>
 
-      <%= f.text_field :email, :class => "form_tag" %>
+      <%= f.text_field :email, :class => "form_tag form-control" %>
         
       <%= f.submit t('action.send') %>
       
-      <hr class="soften">
+      <hr>
 
       <%= render :partial => "devise/shared/links" %>
     </section>

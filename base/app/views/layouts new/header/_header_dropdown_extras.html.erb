@@ -1,0 +1,16 @@
+<div class="dropdown extras">
+
+  <%= link_to '#', class: 'dropdown-toggle', "data-toggle" => "dropdown" do %>
+    <i class='fa fa-dot-circle-o'></i> 
+  <% end %>
+
+  <ul class="dropdown-menu dropdown-menu-right">
+    <li class="notifications-menu">
+      <%= link_to notifications_path, id: 'btn_menu_settings' do %>
+          <i class='fa fa-bell-o' title="<%= t 'dropdown.notifications' %>">
+            <%= t 'dropdown.notifications' %>
+          </i>
+      <% end %>
+    </li>
+  </ul>
+</div>
